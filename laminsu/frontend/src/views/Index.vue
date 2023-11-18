@@ -1,12 +1,10 @@
 <template>
   <Carousel />
   <Feature />
-  <About />
+  <Menus />
   <Facts />
-  <Features2 />
   <Services />
   <Booking />
-  <Menus />
   <Team />
   <Testimonials />
 </template>

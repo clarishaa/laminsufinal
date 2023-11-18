@@ -10,56 +10,87 @@
                 <div class="col-12 text-center">
                     <ul class="list-inline rounded mb-5" id="portfolio-flters">
                         <li class="mx-2 active" data-filter="*">All</li>
-                        <li class="mx-2" data-filter=".appetizers">Appetizers</li>
-                        <li class="mx-2" data-filter=".main-courses">Main Courses</li>
-                        <li class="mx-2" data-filter=".desserts">Desserts</li>
-                        <li class="mx-2" data-filter=".drinks">Drinks</li>
+                        <li v-for="categories in categories" class="mx-2" :data-filter="'.' + categories.category_id">
+                            {{ categories.name }}</li>
                     </ul>
                 </div>
             </div>
             <div class="row g-4 portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="portfolio-inner rounded">
-                        <img class="img-fluid menu" src="@/assets/img/adobo.jpg" alt="">
-                        <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Adobo</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="@/assets/img/adobo.jpg"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                <div :key="menus.id" v-for="menu in menus"
+                    class="col-lg-2 col-md-3 col-sm-4 col-6 portfolio-item wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-wrapper">
+                        <div class="portfolio-inner rounded">
+                            <!-- Image -->
+                            <img class="img-fluid menu" style="width: 100%; max-width: 200px; height: auto;"
+                                :src="require('@/assets/img/' + menu.img_path)" alt="" />
+
+                            <!-- Description -->
+                            <div class="portfolio-text">
+                                <h4 class="text-white mb-4">{{ menu.name }}</h4>
+                                <div class="d-flex">
+                                    <!-- View Button -->
+                                    <a class="btn btn-lg-square rounded-circle mx-2">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+
+                                    <!-- Add to Cart Button -->
+                                    <button class="btn btn-lg-square rounded-circle mx-2" @click="addCart(menu.item_id)">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+
                             </div>
                         </div>
+
+
+                    </div>
+                    <!-- Additional Details -->
+                    <div class="details-container">
+                        <h5>{{ menu.price }}</h5>
+                        <p>{{ menu.description }}</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="portfolio-inner rounded">
-                        <img class="img-fluid menu" src="@/assets/img/adobo.jpg" alt="">
-                        <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Adobo</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="@/assets/img/adobo.jpg"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="portfolio-inner rounded">
-                        <img class="img-fluid menu" src="@/assets/img/adobo.jpg" alt="">
-                        <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Adobo</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="@/assets/img/adobo.jpg"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
+
         </div>
     </div>
     <!-- Menu End -->
 </template>
+
+<script>
+import axios from 'axios'
+export default {
+    data() {
+        return {
+            menus: [], categories: [],
+        }
+    },
+    mounted() {
+        this.getMenu();
+        this.getCategory();
+
+    },
+    methods: {
+        async getMenu() {
+            const menu = await axios.get("/getMenu");
+            this.menus = menu.data;
+            // alert(g);
+        },
+        async getCategory() {
+            const category = await axios.get("/getCategory");
+            this.categories = category.data;
+            // alert(g);
+        },
+        async addCart(item_id) {
+            try {
+                const user_id = sessionStorage.getItem("user_id");
+                await axios.post("/addCart", { item_id: item_id, user_id: user_id });
+                
+            } catch (error) {
+                console.error('Error adding item to cart:', error);
+            }
+        },
+
+    }
+}
+</script>

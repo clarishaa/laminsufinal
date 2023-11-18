@@ -24,8 +24,17 @@
                     </div>
                 </div>
                 <a href="/contact" class="nav-item nav-link">Contact</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown"><i
+                            class="fas fa-user fa-fw" style="color: forestgreen;"></i></a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <a href="/settings" class="dropdown-item">Settings</a>
+                        <a href="/history" class="dropdown-item">Activity Log</a>
+                        <a href="/logout" class="dropdown-item">Logout</a>
+                    </div>
+                </div>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Get Reservation<i
+            <a href="/cart" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Go to Cart<i
                     class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>

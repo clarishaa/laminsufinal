@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MainModel extends Model
+class CartModel extends Model
 {
-    protected $table            = 'users';
-    protected $primaryKey       = 'user_id';
+    protected $table            = 'cart';
+    protected $primaryKey       = 'cart_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['email','token','password','first_name','last_name'];
+    protected $allowedFields    = ['user_id','item_id',	'quantity'];
 
     // Dates
     protected $useTimestamps = false;

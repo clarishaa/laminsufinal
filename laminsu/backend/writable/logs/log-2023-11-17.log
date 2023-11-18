@@ -1,0 +1,258 @@
+ERROR - 2023-11-17 04:40:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(73): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getMenu()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(73): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getMenu()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-17 04:40:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `items`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(73): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getMenu()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-17 04:40:35 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(78): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCategory()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(78): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCategory()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-17 04:40:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categories`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(78): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCategory()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 15:55:30 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 15:55:36 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 15:55:37 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 15:56:09 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 15:56:11 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 15:56:51 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 15:57:46 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 15:59:54 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 16:01:42 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 16:01:58 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 16:02:46 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 16:04:49 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 16:06:11 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 16:08:25 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 16:08:39 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+CRITICAL - 2023-11-17 16:21:16 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\MainController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-17 18:00:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsu-final\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(47): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->book()
+#10 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#3 C:\laragon\www\laminsu-final\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 C:\laragon\www\laminsu-final\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(47): CodeIgniter\BaseModel->save(Array)
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->book()
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#10 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2023-11-17 18:00:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_book` (`uname`, `email`, `mobile`, `people`, `message`) VALUES (:uname:, :email:, :mobile:, :people:, :message:)', [...], false)
+ 3 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\MainController.php(47): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')

@@ -1,97 +1,85 @@
 <template>
-  <!-- Section: Design Block -->
-  <section class="background-radial-gradient overflow-hidden d-flex justify-content-center align-items-center"
-    style="min-height: 100vh;">
-    <div class="card bg-glass col-3">
-      <div class="card-body px-3 py-4 px-md-3">
-        <form @submit.prevent="signup">
-          <div>
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-              <input type="email" name="email" id="email" class="form-control small" placeholder="Email address"
-                v-model="email" />
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
+            <form @submit.prevent="login">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                  v-model="username" required>
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                  v-model="password" required>
+                <label for="floatingPassword">Password</label>
+              </div>
 
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-              <input type="password" name="password" id="password" class="form-control small" placeholder="Password"
-                v-model="password" />
-            </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                <label class="form-check-label" for="rememberPasswordCheck">
+                  Remember password
+                </label>
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign
+                  in</button>
+                <a class="text-center" href="">Forgot Password?</a>
+              </div>
+              <hr class="my-4">
+              <div class="d-grid mb-2">
+                <a class="btn btn-success btn-login text-uppercase fw-bold" href="/signup">Create New Account</a>
+              </div>
+            </form>
           </div>
-          <!-- Submit button -->
-          <button type="submit" class="btn btn-primary mx-auto w-100 mb-3">Signin</button>
-          <!-- Register buttons -->
-          <div class="text-center">
-            <p>or sign up with:</p>
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-facebook-f"></i>
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-google"></i>
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-twitter"></i>
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-github"></i>
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- Section: Design Block -->
+  </div>
 </template>
 <style></style>
 <script>
-// @ is an alias to /src
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import axios from 'axios';
+import router from '@/router';
 export default {
-  name: 'Register',
-  components: {
-    FontAwesomeIcon
-  },
   data() {
     return {
-      username: "",
-      lastname: "",
-      firstname: "",
-      selectedGender: '',
-      bdate: "",
-      phone: "",
-      email: "",
-      password: "",
+      username: '',
+      password: '',
+      errorMessage: '',
+      message: []
 
-    }
+    };
   },
   methods: {
-    async signup() {
-      try {
-        const insert = await axios.post("signup", {
-          username: this.username,
-          lastname: this.lastname,
-          firstname: this.firstname,
-          selectedGender: this.selectedGender,
-          bdate: this.bdate,
-          phone: this.phone,
-          email: this.email,
-          password: this.password,
+
+    login() {
+      const data = {
+        username: this.username,
+        password: this.password,
+        user_id: user_id,
+      };
+
+      axios
+        .post('/login', JSON.stringify(data), {
+          headers: {
+            'Content-Type': 'application/json',
+          },
         })
-      } catch (error) {
-      }
+        .then((response) => {
+          if (response.data.message === 'Login successful') {
+            sessionStorage.setItem("token", response.data.token);
+            sessionStorage.setItem("user_id", response.data.user_id);
+            router.push('/');
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          this.errorMessage = 'Invalid email or password, try again!';
+        });
     },
-
-
-  }
+  },
 };
-
-
-
 </script>
-  
-  

@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MainModel extends Model
+class BookModel extends Model
 {
-    protected $table            = 'users';
-    protected $primaryKey       = 'user_id';
+    protected $table            = 'table_book';
+    protected $primaryKey       = 'booking_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['email','token','password','first_name','last_name'];
+    protected $allowedFields    = ['uname',	'email','mobile','booktime','bookdate',	'people',	'message'];
 
     // Dates
     protected $useTimestamps = false;

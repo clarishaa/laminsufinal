@@ -1,0 +1,464 @@
+ERROR - 2023-11-16 13:32:53 --> mysqli_sql_exception: Table 'dblaminsu.category' doesn't exist in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCartItem()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 13:32:53 --> Table 'dblaminsu.category' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `items`.*, `categories`.`name`
+FROM `items`
+JOIN `category` ON `categories`.`category_id` = `items`.`category_id`
+WHERE `items`.`item_id` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCartItem()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 13:32:57 --> mysqli_sql_exception: Table 'dblaminsu.category' doesn't exist in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCartItem()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 13:32:57 --> Table 'dblaminsu.category' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `items`.*, `categories`.`name`
+FROM `items`
+JOIN `category` ON `categories`.`category_id` = `items`.`category_id`
+WHERE `items`.`item_id` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCartItem()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:07:52 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:07:52 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:07:54 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:07:54 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:07:56 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:07:56 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:10:37 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:10:37 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:10:38 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:10:38 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:10:49 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:10:49 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:11:19 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:11:19 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:12:03 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:12:03 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:12:24 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:12:24 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:12:43 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:12:43 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:12:43 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:12:43 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:12:44 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:12:44 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:12:44 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:12:44 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')
+ERROR - 2023-11-16 14:12:50 --> mysqli_sql_exception: Unknown column 'cart.category_id' in 'on clause' in C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsu-final\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cart`.*...', 0)
+#1 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.*...')
+#2 C:\laragon\www\laminsu-final\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.*...')
+#3 C:\laragon\www\laminsu-final\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*...', Array, false)
+#4 C:\laragon\www\laminsu-final\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsu-final\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\laminsu-final\backend\app\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+#8 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsu-final\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsu-final\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsu-final\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-11-16 14:12:50 --> Unknown column 'cart.category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.*, `items`.*, `categories`.*
+FROM `cart`
+JOIN `items` ON `items`.`item_id` = `cart`.`item_id`
+JOIN `categories` ON `categories`.`category_id` = `cart`.`category_id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MainController.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->getCart()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsu-final\\backend\\public\\index.php')

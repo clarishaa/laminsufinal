@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MainModel extends Model
+class MenuModel extends Model
 {
-    protected $table            = 'users';
-    protected $primaryKey       = 'user_id';
+    protected $table            = 'items';
+    protected $primaryKey       = 'item_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['email','token','password','first_name','last_name'];
+    protected $allowedFields    = [	'name',	'price',	'category_id',	'description', 'img_path'];
 
     // Dates
     protected $useTimestamps = false;

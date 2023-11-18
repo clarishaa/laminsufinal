@@ -67,50 +67,40 @@
 
                 </div>
                 <div class="card mb-4">
-    <div class="card-header">
-      <i class="fas fa-table me-1"></i>
-      DataTable Example
-    </div>
-    <div class="card-body">
-      <table id="dataTable" class="table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>John Doe</td>
-            <td>john@example.com</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jane Doe</td>
-            <td>jane@example.com</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jane Doe</td>
-            <td>jane@example.com</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jane Doe</td>
-            <td>jane@example.com</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jane Doe</td>
-            <td>jane@example.com</td>
-          </tr>
-          <!-- Add more rows as needed -->
-        </tbody>
-      </table>
-    </div>
-  </div>
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        Table Reservations
+                    </div>
+                    <div class="card-body">
+                        <table id="dataTable" class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Mobile</th>
+                                    <th>Reservation Time</th>
+                                    <th>Reservation Date</th>
+                                    <th>Number of People</th>
+                                    <th>Request</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ID</td>
+                                    <td>Name</td>
+                                    <td>Email</td>
+                                    <td>Mobile</td>
+                                    <td>Reservation Time</td>
+                                    <td>Reservation Date</td>
+                                    <td>Number of People</td>
+                                    <td>Request</td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
@@ -165,7 +155,8 @@ export default {
 </script>
 
 <style scoped>
-  .custom-top-margin {
-    margin-top: 6rem; /* Adjust the value as needed */
-  }
+.custom-top-margin {
+    margin-top: 6rem;
+    /* Adjust the value as needed */
+}
 </style>
