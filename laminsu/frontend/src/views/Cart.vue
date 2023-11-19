@@ -14,8 +14,8 @@
                                     <!-- Image -->
                                     <div class="bg-image hover-overlay hover-zoom ripple rounded"
                                         data-mdb-ripple-color="light">
-                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp"
-                                            class="w-100" alt="Blue Jeans Jacket" />
+                                        <img :src="require('@/assets/img/' + getItem(carts).img_path)" class="w-100"
+                                            alt="Blue Jeans Jacket" />
                                         <a href="#!">
                                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
                                         </a>
@@ -25,9 +25,8 @@
 
                                 <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
                                     <!-- Data -->
-                                    <input type="hidden" :value="carts.item_id">
-                                    <p><strong>{{ carts.item_id }}</strong></p>
-                                    <p>Category: {{ carts.item_id }}</p>
+                                    <p><strong>{{ getItem(carts).name }}</strong></p>
+                                    <p>Category: {{ getCategory(getItem(carts)).name }}</p>
                                     <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
                                         title="Remove item">
                                         <i class="fas fa-trash"></i>
@@ -62,7 +61,7 @@
 
                                     <!-- Price -->
                                     <p class="text-start text-md-center">
-                                        <strong>$17.99</strong>
+                                        <strong>₱ {{ getTotal(carts) }}</strong>
                                     </p>
                                     <!-- Price -->
                                 </div>
@@ -133,57 +132,45 @@
 }
 </style>
 <script>
-import axios from 'axios'
+import axios from 'axios';
+
 export default {
     data() {
         return {
-            menus: [], categories: [], carts: []
-        }
+            carts: [],
+            items: [],
+            categories: [],
+        };
     },
     mounted() {
-        this.getMenu();
-        this.getCategory();
-        this.getCart();
-
+        this.fetchData();
     },
     methods: {
-        async getMenu() {
-            const menu = await axios.get("/getMenu");
-            this.menus = menu.data;
+        async fetchData() {
+            try {
+                const [cart, menu, category] = await Promise.all([
+                    axios.get("/getCart"),
+                    axios.get("/getMenu"),
+                    axios.get("/getCategory")
+                ]);
+
+                this.carts = cart.data;
+                this.items = menu.data;
+                this.categories = category.data;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
         },
-        async getCategory() {
-            const category = await axios.get("/getCategory");
-            this.categories = category.data;
+        getItem(cart) {
+            return this.items.find(item => item.item_id === cart.item_id) || {};
         },
-        async getCart() {
-    try {
-        const cart = await axios.get("/getCart");
-        this.carts = cart.data;
-
-        // Extract item_id values from the cart data
-        const itemIds = this.carts.map(cartItem => cartItem.item_id);
-
-        // Fetch menu data based on item_id values
-        await this.fetchMenuData(itemIds);
-    } catch (error) {
-        console.error('Error fetching cart data:', error);
-    }
-},
-
-async fetchMenuData(itemIds) {
-    try {
-        // Fetch menu data
-        const menu = await axios.get("/getMenu");
-        const menuData = menu.data;
-
-        // Filter menu data based on item_id values
-        this.filteredMenus = menuData.filter(menuItem => itemIds.includes(menuItem.item_id));
-    } catch (error) {
-        console.error('Error fetching menu data:', error);
-    }
-},
-
-
-    }
-}
+        getCategory(item) {
+            return this.categories.find(category => category.category_id === item.category_id) || {};
+        },
+        getTotal(cart) {
+            const item = this.getItem(cart);
+            return (item.price || 0) * cart.quantity;
+        },
+    },
+};
 </script>

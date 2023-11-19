@@ -17,16 +17,16 @@
             </div>
             <div class="row g-4 portfolio-container">
                 <div :key="menus.id" v-for="menu in menus"
-                    class="col-lg-2 col-md-3 col-sm-4 col-6 portfolio-item wow fadeInUp" data-wow-delay="0.1s">
+                    :class="'col-lg-2 col-md-3 col-sm-4 col-6 wow fadeInUp shadow rounded overflow-hidden m-3 ' + 'portfolio-item ' + menu.category_id"
+                    data-wow-delay="0.1s">
                     <div class="portfolio-wrapper">
                         <div class="portfolio-inner rounded">
                             <!-- Image -->
-                            <img class="img-fluid menu" style="width: 100%; max-width: 200px; height: auto;"
+                            <img class="img-fluid menu" style="width: 100%; max-width: 200px; height: 200px;"
                                 :src="require('@/assets/img/' + menu.img_path)" alt="" />
 
                             <!-- Description -->
                             <div class="portfolio-text">
-                                <h4 class="text-white mb-4">{{ menu.name }}</h4>
                                 <div class="d-flex">
                                     <!-- View Button -->
                                     <a class="btn btn-lg-square rounded-circle mx-2">
@@ -45,9 +45,20 @@
 
                     </div>
                     <!-- Additional Details -->
-                    <div class="details-container">
-                        <h5>{{ menu.price }}</h5>
-                        <p>{{ menu.description }}</p>
+                    <div class="mt-2">
+                        <h6 class="mb-0 text-dark text-center">{{ menu.name }}</h6>
+                        <p class="mb-0 text-dark text-center">₱ {{ menu.price }}</p>
+                    </div>
+                    <div class="d-flex flex-column mb-1 align-items-center justify-content-center bottom-0">
+                        <div class="d-flex mb-3">
+                            <div>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,7 +73,7 @@
 import Notification from '@/components/Notification.vue';
 import axios from 'axios'
 export default {
-    name:'Menus',
+    name: 'Menus',
     components: {
         Notification
     },
@@ -80,12 +91,10 @@ export default {
         async getMenu() {
             const menu = await axios.get("getMenu");
             this.menus = menu.data;
-            // alert(g);
         },
         async getCategory() {
             const category = await axios.get("getCategory");
             this.categories = category.data;
-            // alert(g);
         },
         async addCart(item_id) {
             try {
@@ -98,7 +107,6 @@ export default {
                 this.$refs.notification.error(error.response.data.message, 'error');
             }
         },
-
     }
 }
 </script>
