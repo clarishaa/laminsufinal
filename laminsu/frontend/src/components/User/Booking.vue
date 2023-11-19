@@ -7,55 +7,34 @@
                 <div class="col-lg-7">
                     <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
                         <h1 class="display-5 text-center mb-5">Book A Table</h1>
-                        <form @submit.prevent="book">
+                        <form @submit.prevent="book" ref="book">
                             <div class="row g-3">
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-light border-0" 
-                                            placeholder="Your Name" v-model="uname">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-light border-0" 
-                                            placeholder="Your Email" v-model="email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-light border-0"
-                                            placeholder="Your Mobile" v-model="mobile">
-                                        <label for="phone">Your Mobile</label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-floating">
-                                        <input type="time" class="form-control bg-light border-0" 
-                                            placeholder="Reservation Time" v-model="rtime">
+                                        <input type="time" class="form-control bg-light border-0"
+                                            placeholder="Reservation Time" v-model="rtime" required>
                                         <label for="time">Reservation Time</label>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control bg-light border-0" 
-                                            placeholder="Reservation Date" v-model="rdate">
+                                        <input type="date" class="form-control bg-light border-0"
+                                            placeholder="Reservation Date" v-model="rdate" required>
                                         <label for="date">Reservation Date</label>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
                                     <div class="form-floating">
-                                        <input type="number" class="form-control bg-light border-0" 
-                                            placeholder="Number of People" v-model="people">
+                                        <input type="number" class="form-control bg-light border-0"
+                                            placeholder="Number of People" v-model="people" required>
                                         <label for="numOfPeople">Number of People</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea class="form-control bg-light border-0"
-                                            placeholder="Special Requests or Message"
-                                            style="height: 100px" v-model="message"></textarea>
+                                            placeholder="Special Requests or Message" style="height: 100px"
+                                            v-model="message"></textarea>
                                         <label for="message">Special Requests or Message</label>
                                     </div>
                                 </div>
@@ -68,43 +47,43 @@
                 </div>
             </div>
         </div>
+        <Notification ref="notification" />
     </div>
     <!-- Booking End -->
 </template>
 <script>
+import Notification from '@/components/Notification.vue';
 import axios from 'axios';
 export default {
-  name: 'Booking',
-  data() {
-    return {
-      uname: '',
-      email: "",
-      mobile: "",
-      rtime: '',
-      rdate: '',
-      people: '',
-      message: '',
-
-    };
-  },
-  methods: {
-    async book() {
-      try {
-        const insert = await axios.post("book", {
-          uname: this.uname,
-          email: this.email,
-          mobile: this.mobile,
-          rtime: this.rtime,
-          rdate: this.rdate,
-          people: this.people,
-          message: this.message,
-
-        })
-        this.showMessage = false;
-      } catch (error) {
-      }
-    }
-  },
+    name: 'Booking',
+    components: {
+        Notification
+    },
+    data() {
+        return {
+            rtime: '',
+            rdate: '',
+            people: '',
+        };
+    },
+    methods: {
+        async book() {
+            try {
+                const user_id = sessionStorage.getItem("user_id");
+                const response = await axios.post("book", {
+                    rtime: this.rtime,
+                    rdate: this.rdate,
+                    people: this.people,
+                    message: this.message,
+                    user_id: user_id
+                })
+                this.$refs.notification.open(response.data.message, 'success');
+                this.$refs.book.reset();
+            } catch (error) {
+                this.$refs.notification.error(response.data.message, 'error');
+            }
+        }
+    },
 };
 </script>
   

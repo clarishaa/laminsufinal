@@ -20,6 +20,10 @@
                 <label for="floatingInput">First Name</label>
               </div>
               <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="floatingInput" placeholder="First Name" v-model="mobile" required>
+                <label for="floatingInput">Mobile Number</label>
+              </div>
+              <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
                   v-model="password" required>
                 <label for="floatingPassword">Password</label>
@@ -63,6 +67,7 @@ export default {
       username: '',
       lastname: "",
       firstname: "",
+      mobile: "",
       password: '',
       confirmpassword: '',
     };
@@ -79,6 +84,7 @@ export default {
           username: this.username,
           lastname: this.lastname,
           firstname: this.firstname,
+          mobile: this.mobile,
           password: this.password,
         })
         this.showMessage = false;

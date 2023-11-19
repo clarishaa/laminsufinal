@@ -56,10 +56,10 @@ export default {
   methods: {
 
     login() {
+
       const data = {
         username: this.username,
         password: this.password,
-        user_id: user_id,
       };
 
       axios

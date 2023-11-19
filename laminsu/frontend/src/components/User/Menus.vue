@@ -53,13 +53,19 @@
             </div>
 
         </div>
+        <Notification ref="notification" />
     </div>
     <!-- Menu End -->
 </template>
 
 <script>
+import Notification from '@/components/Notification.vue';
 import axios from 'axios'
 export default {
+    name:'Menus',
+    components: {
+        Notification
+    },
     data() {
         return {
             menus: [], categories: [],
@@ -72,22 +78,24 @@ export default {
     },
     methods: {
         async getMenu() {
-            const menu = await axios.get("/getMenu");
+            const menu = await axios.get("getMenu");
             this.menus = menu.data;
             // alert(g);
         },
         async getCategory() {
-            const category = await axios.get("/getCategory");
+            const category = await axios.get("getCategory");
             this.categories = category.data;
             // alert(g);
         },
         async addCart(item_id) {
             try {
                 const user_id = sessionStorage.getItem("user_id");
-                await axios.post("/addCart", { item_id: item_id, user_id: user_id });
-                
+                const response = await axios.post("addCart", { item_id: item_id, user_id: user_id });
+                this.$refs.notification.open(response.data.message, 'success');
+
+
             } catch (error) {
-                console.error('Error adding item to cart:', error);
+                this.$refs.notification.error(error.response.data.message, 'error');
             }
         },
 

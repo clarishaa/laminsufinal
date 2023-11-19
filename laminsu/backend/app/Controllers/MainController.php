@@ -33,21 +33,20 @@ class MainController extends ResourceController
         return $this->respond($data, 200);
     }
 
-    public function book(){
+    public function book()
+    {
         $this->book = new BookModel();
         $json = $this->request->getJSON();
 
-        $data=[
-            'uname'=> $json->uname,
-            'email'=> $json->email,
-            'mobile'=> $json->mobile,
-            'rtime'=> $json->rtime,
-            'rdate'=> $json->rdate,
-            'people'=> $json->people,
-            'message'=> $json->message,
+        $data = [
+            'user_id' => $json->user_id,
+            'booktime' => $json->rtime,
+            'bookdate' => $json->rdate,
+            'people' => $json->people,
+            'message' => $json->message,
         ];
 
-        $book= $this->book->save($data);
+        $book = $this->book->save($data);
         if ($book) {
             return $this->respond(['message' => 'Booking successful'], 200);
         } else {
@@ -56,80 +55,84 @@ class MainController extends ResourceController
     }
 
     public function register()
-{
-    $json = $this->request->getJSON();
+    {
+        $json = $this->request->getJSON();
 
-    $existingUser = $this->main->where('email', $json->username)->first();
+        $existingUser = $this->main->where('email', $json->username)->first();
 
-    if ($existingUser) {
-        return $this->respond(['message' => 'Email already exists'], 400);
-    }
-    $token = $this->verification(50);
-    $data = [
-        'email' => $json->username,
-        'last_name' => $json->lastname,
-        'first_name' => $json->firstname,
-        'password' => password_hash($json->password, PASSWORD_DEFAULT),
-        'token' => $token
-    ];
-
-    $register = $this->main->save($data);
-
-    if ($register) {
-        return $this->respond(['message' => 'Registration successful'], 200);
-    } else {
-        return $this->respond(['message' => 'Registration failed'], 500);
-    }
-    
-}
-
-public function verification($length){
-
-
-    $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-     return substr(str_shuffle($str_result),
-     0, $length);
-  }
-
-
-  public function addCart()
-{
-    $this->cart = new CartModel();
-    $json = $this->request->getJSON();
-
-    $item_id = $json->item_id;
-    $user = $json->user_id;
-
-    $existing = $this->cart->where(['user_id' => $user, 'item_id' => $item_id])->first();
-
-    if ($existing) {
-        $existing['quantity']++;
-        $updateResult = $this->cart->update($existing['cart_id'], $existing);
-
-        if ($updateResult) {
-            return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
-        } else {
-            return $this->respond(['message' => 'Failed to update item quantity in the cart'], 500);
+        if ($existingUser) {
+            return $this->respond(['message' => 'Email already exists'], 400);
         }
-    } else {
+        $token = $this->verification(50);
         $data = [
-            'user_id'  => $user,
-            'item_id'  => $item_id,
-            'quantity' => 1,
+            'email' => $json->username,
+            'last_name' => $json->lastname,
+            'first_name' => $json->firstname,
+            'mobile' => $json->mobile,
+            'password' => password_hash($json->password, PASSWORD_DEFAULT),
+            'token' => $token
         ];
 
-        $addcart = $this->cart->save($data);
+        $register = $this->main->save($data);
 
-        if ($addcart) {
-            return $this->respond(['message' => 'Item added to cart successfully'], 200);
+        if ($register) {
+            return $this->respond(['message' => 'Registration successful'], 200);
         } else {
-            return $this->respond(['message' => 'Failed to add item to cart'], 500);
+            return $this->respond(['message' => 'Registration failed'], 500);
         }
     }
-}
+
+    public function verification($length)
+    {
 
 
-  
+        $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        return substr(
+            str_shuffle($str_result),
+            0,
+            $length
+        );
+    }
+
+
+    public function addCart()
+    {
+        $this->cart = new CartModel();
+        $json = $this->request->getJSON();
+
+        $item_id = $json->item_id;
+        $user = $json->user_id;
+
+        $existing = $this->cart->where(['user_id' => $user, 'item_id' => $item_id])->first();
+
+        if ($existing) {
+            $existing['quantity']++;
+            $updateResult = $this->cart->update($existing['cart_id'], $existing);
+
+            if ($updateResult) {
+                return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
+            } else {
+                return $this->respond(['message' => 'Failed to update item quantity in the cart'], 500);
+            }
+        } else {
+            $data = [
+                'user_id'  => $user,
+                'item_id'  => $item_id,
+                'quantity' => 1,
+            ];
+
+            $addcart = $this->cart->save($data);
+
+            if ($addcart) {
+                return $this->respond(['message' => 'Item added to cart successfully'], 200);
+            } else {
+                return $this->respond(['message' => 'Failed to add item to cart'], 500);
+            }
+        }
+    }
+
+
+
     public function getMenu()
     {
         $menu = new MenuModel();
@@ -150,31 +153,30 @@ public function verification($length){
     }
 
     public function login()
-{
-    $json = $this->request->getJSON();
+    {
+        $json = $this->request->getJSON();
 
-    if (isset($json->username) && isset($json->password)) {
-        $username = $json->username;
-        $password = $json->password;
+        if (isset($json->username) && isset($json->password)) {
+            $username = $json->username;
+            $password = $json->password;
 
-        $userModel = new MainModel();
-        $data = $userModel->where('email', $username)->first();
+            $userModel = new MainModel();
+            $data = $userModel->where('email', $username)->first();
 
-        if ($data) {
-            $pass = $data['password'];
-            $auth = password_verify($password, $pass);
+            if ($data) {
+                $pass = $data['password'];
+                $auth = password_verify($password, $pass);
 
-            if ($auth) {
-                return $this->respond(['message' => 'Login successful', 'token' => $data['token'], 'user_id' => $data['user_id']], 200);
+                if ($auth) {
+                    return $this->respond(['message' => 'Login successful', 'token' => $data['token'], 'user_id' => $data['user_id']], 200);
+                } else {
+                    return $this->respond(['message' => 'Invalid email or password'], 401);
+                }
             } else {
                 return $this->respond(['message' => 'Invalid email or password'], 401);
             }
         } else {
-            return $this->respond(['message' => 'Invalid email or password'], 401);
+            return $this->respond(['message' => 'Invalid JSON data'], 400);
         }
-    } else {
-        return $this->respond(['message' => 'Invalid JSON data'], 400);
     }
-}
-
 }

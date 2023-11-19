@@ -12,7 +12,7 @@ class BookModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['uname',	'email','mobile','booktime','bookdate',	'people',	'message'];
+    protected $allowedFields    = ['user_id','booktime','bookdate',	'people',	'message'];
 
     // Dates
     protected $useTimestamps = false;
