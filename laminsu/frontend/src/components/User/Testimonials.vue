@@ -9,7 +9,7 @@
                     <p class="mb-4">Our customers have shared their thoughts about their experience at our restaurant and
                         bar. We take pride in providing an exceptional dining and entertainment experience for our guests.
                     </p>
-                    <a class="btn btn-primary py-3 px-4" href="#" >Add Review</a>
+                    <a class="btn btn-primary py-3 px-4" href="#">Add Review</a>
                 </div>
                 <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="owl-carousel testimonial-carousel">
@@ -34,5 +34,4 @@
         </div>
     </div>
 </div>
-<!-- Testimonial End -->
-</template>
+<!-- Testimonial End --></template>

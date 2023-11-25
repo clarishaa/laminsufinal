@@ -5,19 +5,26 @@
                 <div class="col-md-9">
                     <div class="card mb-4">
                         <div class="card-header py-3">
-                            <h5 class="mb-0">Cart - 2 items</h5>
+                            <h5 class="mb-0">Cart - {{ countCart() }} items</h5>
                         </div>
                         <div class="card-body" :key="carts.cart_id" v-for="carts in carts">
+                            <div class="col-lg-1 col-md-12 mb-4 mb-lg-0">
+                                <!-- Checkbox -->
+                                <input type="checkbox" :id="'checkbox_' + carts.cart_id" v-model="checkedItems"
+                                    :value="carts.cart_id" @click="check(carts.cart_id)">
+                                <!-- Checkbox -->
+                            </div>
                             <!-- Single item -->
                             <div class="row">
                                 <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
                                     <!-- Image -->
                                     <div class="bg-image hover-overlay hover-zoom ripple rounded"
                                         data-mdb-ripple-color="light">
-                                        <img :src="require('@/assets/img/' + getItem(carts).img_path)" class="w-100"
-                                            alt="Blue Jeans Jacket" />
+                                        <img :src="require('@/assets/img/' + getItem(carts).img_path)" class="img-fluid"
+                                            alt="Image description" style="max-width: 50%; height: 50%;" />
                                         <a href="#!">
-                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)">
+                                            </div>
                                         </a>
                                     </div>
                                     <!-- Image -->
@@ -42,7 +49,7 @@
                                     <!-- Quantity -->
                                     <div class="d-flex mb-4" style="max-width: 300px">
                                         <button class="btn btn-primary px-3 me-2"
-                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                            @click="decQuantity(getItem(carts).item_id)">
                                             <i class="fas fa-minus"></i>
                                         </button>
 
@@ -53,9 +60,10 @@
                                         </div>
 
                                         <button class="btn btn-primary px-3 ms-2"
-                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            @click="addQuantity(getItem(carts).item_id)">
                                             <i class="fas fa-plus"></i>
                                         </button>
+
                                     </div>
                                     <!-- Quantity -->
 
@@ -71,60 +79,59 @@
                             <hr class="my-4" />
 
                         </div>
-                    </div>
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <p><strong>Expected shipping delivery</strong></p>
-                            <p class="mb-0">12.10.2020 - 14.10.2020</p>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p><strong>Expected shipping delivery</strong></p>
+                                <p class="mb-0">12.10.2020 - 14.10.2020</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card mb-4 mb-lg-0">
-                        <div class="card-body">
-                            <p><strong>We accept</strong></p>
+                        <div class="card mb-4 mb-lg-0">
+                            <div class="card-body">
+                                <p><strong>We accept</strong></p>
 
+                            </div>
                         </div>
                     </div>
+                    <div class="col-md-3 footer">
+                        <div class="card">
+                            <div class="card-header py-3">
+                                <h5 class="mb-0">Summary</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li
+                                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                        <span class="text-nowrap">Products</span>
+                                        <span>{{ countCheck() }}</span>
+                                    </li>
+                                    <hr class="my-4" />
+
+                                    <li
+                                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                                        <div>
+                                            <strong>Total amount</strong>
+                                            <strong>
+                                                <p class="mb-0 text-break">(including VAT)</p>
+                                            </strong>
+                                        </div>
+                                        <span class="text-nowrap"><strong>₱ {{ TotalAmount() }}</strong></span>
+                                    </li>
+                                </ul>
+
+                                <button type="button" class="btn btn-primary btn-lg btn-block float-end">
+                                    Go to checkout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
-                <div class="col-md-3 footer">
-                    <div class="card mb-4">
-                        <div class="card-header py-3">
-                            <h5 class="mb-0">Summary</h5>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li
-                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                    Products
-                                    <span>$53.98</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                    Shipping
-                                    <span>Gratis</span>
-                                </li>
-                                <li
-                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                    <div>
-                                        <strong>Total amount</strong>
-                                        <strong>
-                                            <p class="mb-0">(including VAT)</p>
-                                        </strong>
-                                    </div>
-                                    <span><strong>$53.98</strong></span>
-                                </li>
-                            </ul>
-
-                            <button type="button" class="btn btn-primary btn-lg btn-block">
-                                Go to checkout
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 </template>
-<style>
+<style scoped>
 .footer {
     position: fixed;
     bottom: 0;
@@ -140,6 +147,7 @@ export default {
             carts: [],
             items: [],
             categories: [],
+            checkedItems: []
         };
     },
     mounted() {
@@ -147,9 +155,11 @@ export default {
     },
     methods: {
         async fetchData() {
+            const user_id = sessionStorage.getItem("user_id");
+
             try {
                 const [cart, menu, category] = await Promise.all([
-                    axios.get("/getCart"),
+                    axios.get(`/getCart/${user_id}`),
                     axios.get("/getMenu"),
                     axios.get("/getCategory")
                 ]);
@@ -161,6 +171,7 @@ export default {
                 console.error('Error fetching data:', error);
             }
         },
+
         getItem(cart) {
             return this.items.find(item => item.item_id === cart.item_id) || {};
         },
@@ -169,8 +180,65 @@ export default {
         },
         getTotal(cart) {
             const item = this.getItem(cart);
-            return (item.price || 0) * cart.quantity;
+            const total = (item.price || 0) * cart.quantity;
+
+            // Use toFixed to round to two decimal places
+            return parseFloat(total.toFixed(2));
         },
+
+        addQuantity(item_id) {
+            const user_id = sessionStorage.getItem("user_id");
+
+            axios.post('/addQuantity', { user_id, item_id })
+                .then(response => {
+                    console.log(response.data.message);
+
+                    this.fetchData();
+                })
+                .catch(error => {
+                    console.error('Error updating quantity:', error);
+                });
+        },
+        decQuantity(item_id) {
+            const user_id = sessionStorage.getItem("user_id");
+
+            axios.post('/decQuantity', { user_id, item_id })
+                .then(response => {
+                    console.log(response.data.message);
+
+                    this.fetchData();
+                })
+                .catch(error => {
+                    console.error('Error updating quantity:', error);
+                });
+        },
+        countCart() {
+            return this.carts.length;
+        },
+        countCheck() {
+            return this.checkedItems.length;
+        },
+        check(cartId) {
+            const index = this.checkedItems.indexOf(cartId);
+
+            if (index === -1) {
+                this.checkedItems.push(cartId);
+            } else {
+                this.checkedItems.splice(index, 1);
+            }
+            console.log('Checked Items:', this.checkedItems);
+        },
+
+        TotalAmount() {
+                      let totalAmount = 0;
+                      this.checkedItems.forEach(cartId => {
+                            const cart = this.carts.find(cart => cart.cart_id === cartId);
+                            if (cart) {
+                                  totalAmount += this.getTotal(cart);
+                            }
+                      });
+                      return parseFloat(totalAmount.toFixed(2));
+                },
     },
 };
 </script>

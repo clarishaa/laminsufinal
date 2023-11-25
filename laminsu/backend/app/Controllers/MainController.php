@@ -57,28 +57,35 @@ class MainController extends ResourceController
     public function register()
     {
         $json = $this->request->getJSON();
-
-        $existingUser = $this->main->where('email', $json->username)->first();
-
-        if ($existingUser) {
-            return $this->respond(['message' => 'Email already exists'], 400);
-        }
+        $email = $json->username;
+        $userModel = new MainModel();
         $token = $this->verification(50);
-        $data = [
-            'email' => $json->username,
-            'last_name' => $json->lastname,
-            'first_name' => $json->firstname,
-            'mobile' => $json->mobile,
-            'password' => password_hash($json->password, PASSWORD_DEFAULT),
-            'token' => $token
-        ];
+        $exUser = $userModel->where('email', $email)->first();
 
-        $register = $this->main->save($data);
-
-        if ($register) {
-            return $this->respond(['message' => 'Registration successful'], 200);
+        if ($exUser) {
+            return $this->respond(["error" => "Email already exists"], 400);
         } else {
-            return $this->respond(['message' => 'Registration failed'], 500);
+            $password = $json->password;
+
+            if (!preg_match('/[A-Za-z]/', $password) || !preg_match('/[0-9]/', $password)) {
+                return $this->respond(["error" => "Password must contain at least one letter, one number and one special character"], 400);
+            }
+
+            $data = [
+                'first_name' => $json->first_name,
+                'last_name' => $json->last_name,
+                'mobile' => $json->mobile,
+                'email' => $email,
+                'password' => password_hash($password, PASSWORD_BCRYPT),
+                'token' => $token,
+            ];
+
+            $u = $userModel->save($data);
+            if ($u) {
+                return $this->respond(['msg' => 'Registered Successfully', 'token' => $token]);
+            } else {
+                return $this->respond(['msg' => 'Error occurred']);
+            }
         }
     }
 
@@ -132,7 +139,53 @@ class MainController extends ResourceController
     }
 
 
-
+    public function addQuantity()
+    {
+        $this->cart = new CartModel();
+        $json = $this->request->getJSON();
+    
+        $item_id = $json->item_id;
+        $user = $json->user_id;
+    
+        $existing = $this->cart->where(['user_id' => $user, 'item_id' => $item_id])->first();
+    
+        if ($existing) {
+            $existing['quantity']++;
+            $updateResult = $this->cart->update($existing['cart_id'], $existing);
+    
+            if ($updateResult) {
+                return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
+            } else {
+                return $this->respond(['message' => 'Failed to update item quantity in the cart'], 500);
+            }
+        } else {
+            return $this->respond(['message' => 'Item not found in the cart'], 404);
+        }
+    }
+    public function decQuantity()
+    {
+        $this->cart = new CartModel();
+        $json = $this->request->getJSON();
+    
+        $item_id = $json->item_id;
+        $user = $json->user_id;
+    
+        $existing = $this->cart->where(['user_id' => $user, 'item_id' => $item_id])->first();
+    
+        if ($existing) {
+            $existing['quantity']--;
+            $updateResult = $this->cart->update($existing['cart_id'], $existing);
+    
+            if ($updateResult) {
+                return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
+            } else {
+                return $this->respond(['message' => 'Failed to update item quantity in the cart'], 500);
+            }
+        } else {
+            return $this->respond(['message' => 'Item not found in the cart'], 404);
+        }
+    }
+    
     public function getMenu()
     {
         $menu = new MenuModel();
@@ -145,12 +198,14 @@ class MainController extends ResourceController
         $data = $category->findAll();
         return $this->respond($data, 200);
     }
-    public function getCart()
+    public function getCart($user_id)
     {
         $cart = new CartModel();
-        $data = $cart->findAll();
+        $data = $cart->where('user_id', $user_id)->findAll();
+        
         return $this->respond($data, 200);
     }
+    
 
     public function login()
     {
@@ -170,10 +225,10 @@ class MainController extends ResourceController
                 if ($auth) {
                     return $this->respond(['message' => 'Login successful', 'token' => $data['token'], 'user_id' => $data['user_id']], 200);
                 } else {
-                    return $this->respond(['message' => 'Invalid email or password'], 401);
+                    return $this->respond(['error' => 'Invalid email or password'], 401);
                 }
             } else {
-                return $this->respond(['message' => 'Invalid email or password'], 401);
+                return $this->respond(['error' => 'Invalid email or password'], 401);
             }
         } else {
             return $this->respond(['message' => 'Invalid JSON data'], 400);

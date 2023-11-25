@@ -429,6 +429,7 @@ h6,
     opacity: 0;
 }
 
+
 .portfolio-inner:hover .portfolio-text {
     transition-delay: .3s;
     opacity: 1;

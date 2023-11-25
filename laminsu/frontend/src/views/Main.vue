@@ -25,10 +25,3 @@
   </script>
 
 
-<style scoped>
-@import '@/assets/lib/animate/animate.min.css';
-@import '@/assets/lib/owlcarousel/assets/owl.carousel.min.css';
-@import '@/assets/lib/lightbox/css/lightbox.min.css';
-@import '@/assets/css/bootstrap.min.css';
-@import '@/assets/css/style.css';
-</style>
