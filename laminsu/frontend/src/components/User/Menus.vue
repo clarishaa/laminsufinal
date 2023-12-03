@@ -22,8 +22,7 @@
                     <div class="portfolio-wrapper">
                         <div class="portfolio-inner rounded">
                             <!-- Image -->
-                            <img class="img-fluid menu"
-                                :src="require('@/assets/img/' + menu.img_path)" alt="" />
+                            <img class="img-fluid menu" :src="require('@/assets/img/' + menu.img_path)" alt="" />
 
                             <!-- Description -->
                             <div class="portfolio-text">
@@ -48,6 +47,7 @@
                     <div class="mt-2">
                         <h6 class="mb-0 text-dark text-center">{{ menu.name }}</h6>
                         <p class="mb-0 text-dark text-center">₱ {{ menu.price }}</p>
+                        <p class="mb-0 text-dark text-center">Available: {{ menu.quantity }}</p>
                     </div>
                     <div class="d-flex flex-column mb-1 align-items-center justify-content-center bottom-0">
                         <div class="d-flex mb-3">

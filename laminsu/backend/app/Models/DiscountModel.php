@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MenuModel extends Model
+class DiscountModel extends Model
 {
-    protected $table            = 'items';
-    protected $primaryKey       = 'item_id';
+    protected $table            = 'discounts';
+    protected $primaryKey       = 'discount_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [	'name',	'price',	'category_id',	'description', 'img_path', 'created_at', 'quantity'];
+    protected $allowedFields    = ['code','name','percentage','start_date','end_date'];
 
     // Dates
     protected $useTimestamps = false;

@@ -35,13 +35,13 @@
               </p>
             </div>
             <div class="col-xl-2 ms-auto">
-                <button class="btn btn-light text-capitalize border-0 ms-2" onclick="window.print()">
-                  <i class="fas fa-print text-primary"></i> Print
-                </button>
-                <button class="btn btn-light text-capitalize ms-2">
-                  <i class="far fa-file-pdf text-danger"></i> Export
-                </button>
-              </div>
+              <button class="btn btn-light text-capitalize border-0 ms-2" onclick="window.print()">
+                <i class="fas fa-print text-primary"></i> Print
+              </button>
+              <button class="btn btn-light text-capitalize ms-2">
+                <i class="far fa-file-pdf text-danger"></i> Export
+              </button>
+            </div>
           </div>
 
           <div class="row my-2 mx-1 justify-content-center text-sm" v-for="item in items">
@@ -59,7 +59,7 @@
                 <tr>
                   <th scope="row">1</th>
                   <td>{{ item.name }}</td>
-                  <td>{{ item.quantity }}</td>
+                  <td>{{ item.order_item_quantity }}</td>
                   <td>₱ {{ item.price }}</td>
                   <td>₱ {{ item.total_price }}</td>
                 </tr>
@@ -71,14 +71,20 @@
           <div class="row text-sm">
             <div class="col-xl-6">
               <ul class="list-unstyled">
-                <li class="text-muted ms-3"><span class="text-black me-2">SubTotal</span>₱ {{ invoice.total_amount }}</li>
-                <li class="text-muted ms-3 mt-2"><span class="text-black me-2">Tax(15%)</span>$111</li>
+                <li class="text-muted ms-3">
+                  <span class="text-black me-2">SubTotal</span>₱ {{ invoice.total_amount }}
+                </li>
+                <li class="text-muted ms-3 mt-2">
+                  <span class="text-black me-2">Tax(12%)</span>
+                  ₱ {{ (invoice.total_amount * 0.12).toFixed(2) }}
+                </li>
               </ul>
             </div>
             <div class="col-xl-6 text-end">
               <p class="text-black">
                 <span class="text-black me-2">Total Amount</span>
-                <strong style="font-size: 18px; color: rgb(3, 70, 52);">$1221</strong>
+                <strong style="font-size: 18px; color: rgb(3, 70, 52);">₱ {{ (Number(invoice.total_amount) +
+                  Number(invoice.total_amount * 0.12)).toFixed(2) }}</strong>
               </p>
             </div>
 
@@ -104,9 +110,7 @@
 <style >
 .btn-light:hover {
   background-color: rgb(123, 207, 148);
-  /* Change to your desired hover background color */
   color: #fff;
-  /* Change to your desired hover text color */
 }
 </style>
 <script>

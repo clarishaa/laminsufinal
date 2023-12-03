@@ -54,8 +54,8 @@
                                         </button>
 
                                         <div class="form-outline">
-                                            <input id="form1" min="0" name="quantity" :value="carts.quantity" type="number"
-                                                class="form-control" />
+                                            <input disabled id="form1" min="0" name="quantity" :value="carts.quantity"
+                                                type="number" class="form-control" />
                                         </div>
 
                                         <button class="btn btn-primary px-3 ms-2"
@@ -172,11 +172,15 @@
         </div>
         <input class="form-control p-2 fs-6 mb-2" v-if="selectedOption === 'delivery'" v-model="address"
             placeholder="Enter your address" />
-        <input class="form-control p-2 fs-6" v-model="details" placeholder="Message" />
+        <input class="form-control p-2 fs-6 mb-2" v-model="details" placeholder="Message" />
+        <!-- <div class="input-group mb-3">
+            <input class="form-control p-2 fs-6" v-model="discount" placeholder="Voucher Code" />
+            <button class="btn btn-outline-primary" @click="applyDiscount">Apply</button>
+        </div> -->
         <button class="btn btn-primary mt-2" @click="checkout">Checkout</button>
-        <button @click="openInv">invoice</button>
+
     </ReusableModal>
-    
+
     <Notification ref="notification" />
 </template>
 <style >
@@ -241,7 +245,7 @@ import axios from 'axios';
 
 export default {
     components: {
-        Notification, ReusableModal, 
+        Notification, ReusableModal,
     },
     data() {
         return {
@@ -280,6 +284,7 @@ export default {
                 console.error('Error fetching data:', error);
             }
         },
+
         async getInvoice(invoice_id) {
             try {
                 const response = await axios.get(`/getInvoice/${invoice_id}`);
@@ -312,6 +317,7 @@ export default {
                 })
                 .catch(error => {
                     console.error('Error updating quantity:', error);
+                    this.$refs.notification.error(error.response.data.message, 'error');
                 });
         },
         decQuantity(item_id) {
@@ -355,6 +361,10 @@ export default {
             return parseFloat(totalAmount.toFixed(2));
         },
         openModal() {
+            if (this.checkedItems.length === 0) {
+                this.$refs.notification.error('Please select at least one item before proceeding to checkout.', 'error');
+                return;
+            }
             this.isModalOpen = true;
         },
         closeModal() {
@@ -373,6 +383,10 @@ export default {
         },
         async checkout() {
             try {
+                if (!this.selectedOption) {
+                    this.$refs.notification.error('Please select an order type.', 'error');
+                    return;
+                }
                 const user_id = sessionStorage.getItem("user_id");
 
                 const orderItems = this.checkedItems.map(cartId => {

@@ -21,6 +21,7 @@ class MainController extends ResourceController
     protected $testimonial;
     protected $category;
     protected $table;
+    protected $items;
 
     public function __construct()
     {
@@ -55,7 +56,7 @@ class MainController extends ResourceController
     {
         $this->book = new BookModel();
         $json = $this->request->getJSON();
-        
+
 
         $data = [
             'user_id' => $json->user_id,
@@ -140,6 +141,7 @@ class MainController extends ResourceController
 
     public function addCart()
     {
+        $this->items = new MenuModel();
         $this->cart = new CartModel();
         $json = $this->request->getJSON();
 
@@ -147,36 +149,45 @@ class MainController extends ResourceController
         $user = $json->user_id;
 
         $existing = $this->cart->where(['user_id' => $user, 'item_id' => $item_id])->first();
+        $available = $this->items->where('item_id', $item_id)->get()->getRowArray()['quantity'];
 
-        if ($existing) {
-            $existing['quantity']++;
-            $updateResult = $this->cart->update($existing['cart_id'], $existing);
+        $addQuantity = ($existing) ? $existing['quantity'] + 1 : 1;
 
-            if ($updateResult) {
-                return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
+        if ($addQuantity <= $available) {
+            if ($existing) {
+                $existing['quantity']++;
+                $updateResult = $this->cart->update($existing['cart_id'], $existing);
+
+                if ($updateResult) {
+                    return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
+                } else {
+                    return $this->respond(['message' => 'Failed to update item quantity in the cart'], 500);
+                }
             } else {
-                return $this->respond(['message' => 'Failed to update item quantity in the cart'], 500);
+                $data = [
+                    'user_id'  => $user,
+                    'item_id'  => $item_id,
+                    'quantity' => 1,
+                ];
+
+                $addcart = $this->cart->save($data);
+
+                if ($addcart) {
+                    return $this->respond(['message' => 'Item added to cart successfully'], 200);
+                } else {
+                    return $this->respond(['message' => 'Failed to add item to cart'], 500);
+                }
             }
         } else {
-            $data = [
-                'user_id'  => $user,
-                'item_id'  => $item_id,
-                'quantity' => 1,
-            ];
-
-            $addcart = $this->cart->save($data);
-
-            if ($addcart) {
-                return $this->respond(['message' => 'Item added to cart successfully'], 200);
-            } else {
-                return $this->respond(['message' => 'Failed to add item to cart'], 500);
-            }
+            return $this->respond(['message' => 'Requested quantity exceeds available stock'], 400);
         }
     }
 
 
+
     public function addQuantity()
     {
+        $this->items = new MenuModel();
         $this->cart = new CartModel();
         $json = $this->request->getJSON();
 
@@ -184,20 +195,28 @@ class MainController extends ResourceController
         $user = $json->user_id;
 
         $existing = $this->cart->where(['user_id' => $user, 'item_id' => $item_id])->first();
+        $available = $this->items->where('item_id', $item_id)->get()->getRowArray()['quantity'];
 
         if ($existing) {
-            $existing['quantity']++;
-            $updateResult = $this->cart->update($existing['cart_id'], $existing);
+            $addQuantity = $existing['quantity'] + 1;
 
-            if ($updateResult) {
-                return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
+            if ($addQuantity <= $available) {
+                $existing['quantity']++;
+                $updateResult = $this->cart->update($existing['cart_id'], $existing);
+
+                if ($updateResult) {
+                    return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
+                } else {
+                    return $this->respond(['message' => 'Failed to update item quantity in the cart'], 500);
+                }
             } else {
-                return $this->respond(['message' => 'Failed to update item quantity in the cart'], 500);
+                return $this->respond(['message' => 'Requested quantity exceeds available stock'], 400);
             }
         } else {
             return $this->respond(['message' => 'Item not found in the cart'], 404);
         }
     }
+
     public function decQuantity()
     {
         $this->cart = new CartModel();
@@ -229,9 +248,10 @@ class MainController extends ResourceController
     public function getMenu()
     {
         $menu = new MenuModel();
-        $data = $menu->findAll();
+        $data = $menu->where('quantity >', 0)->findAll();
         return $this->respond($data, 200);
     }
+
     public function getCategory()
     {
         $category = new CategoryModel();
