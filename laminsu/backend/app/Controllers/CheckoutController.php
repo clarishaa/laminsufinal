@@ -68,11 +68,6 @@ class CheckoutController extends ResourceController
             ];
 
             $this->orderitems->save($orderitem);
-
-            $this->items->set('quantity', 'quantity - ' . $item->quantity, false);
-            $this->items->where('item_id', $item->item_id)->update();
-            $this->carts->where('item_id', $item->item_id)->delete();
-
         }
 
         $prefix = 'LMCC';
@@ -136,5 +131,25 @@ class CheckoutController extends ResourceController
             ->getResult();
 
         return $this->respond(['invoice_details' => $data, 'items' => $items], 200);
+    }
+
+    public function payment($invoice_id)
+    {
+        $invoice = $this->invoice->find($invoice_id);
+
+        if (!$invoice) {
+            return $this->respond(['message' => 'Invoice not found'], 404);
+        }
+
+        $orderItems = $this->orderitems->where('order_id', $invoice['order_id'])->findAll();
+
+
+        foreach ($orderItems as $item) {
+            $this->items->set('quantity', 'quantity - ' . $item['quantity'], false);
+            $this->items->where('item_id', $item['item_id'])->update();
+        }
+        $this->carts->where('item_id', $item['item_id'])->delete();
+
+        return $this->respond(['message' => 'Payment successful'], 200);
     }
 }

@@ -1,7 +1,7 @@
 <template>
-  <div class="card">
-    <div class="card-body">
-      <div class="container mb-5 mt-3" v-if="invoices.length > 0" v-for="invoice in invoices" :key="invoice.invoice_id">
+  <div class="card" v-if="invoices.length > 0" v-for="invoice in invoices" :key="invoice.invoice_id">
+    <div class="card-body" id="inv">
+      <div class="container mb-5 mt-3">
         <div class="row d-flex align-items-baseline">
           <div class="col-xl-9">
             <img :src="require('@/assets/logo.png')" class="img-fluid" alt="Image description"
@@ -36,10 +36,13 @@
             </div>
             <div class="col-xl-2 ms-auto">
               <button class="btn btn-light text-capitalize border-0 ms-2" onclick="window.print()">
-                <i class="fas fa-print text-primary"></i> Print
+                <i class="fas fa-print text-primary"></i>
               </button>
               <button class="btn btn-light text-capitalize ms-2">
-                <i class="far fa-file-pdf text-danger"></i> Export
+                <i class="far fa-file-pdf text-danger"></i>
+              </button>
+              <button class="btn btn-light text-capitalize ms-2" @click="save">
+                <i class="fas fa-images ms-2"></i>
               </button>
             </div>
           </div>
@@ -91,20 +94,18 @@
           </div>
 
           <hr>
-          <div class="row text-sm">
-            <div class="col-xl-10">
-              <p>Thank you for your purchase</p>
+          <div class="row text-sm text-center">
+            <div style="text-align: center; margin-top: 20px; font-family: 'Helvetica', sans-serif; color: #333;">
+              <h2 style="color: #4CAF50; font-size: 24px; font-weight: bold;">Thank you for your purchase!</h2>
             </div>
-            <div class="col-xl-2">
-              <button type="button" class="btn btn-primary text-capitalize btn-lg float-end">Pay
-                Now</button>
-            </div>
+            <p style="font-size: 10px; line-height: 1.5; margin-bottom: 20px;">La Minsu | Masipit, Calapan City | laminsu@gail.com | +630 123 456 789</p>
+            <p>Show this to {{ invoice.order_type === 'delivery' ? 'Delivery Rider' : 'Cashier' }}.</p>
           </div>
-
         </div>
       </div>
     </div>
   </div>
+  <Notification ref="notification" />
 </template>
 
 <style >
@@ -114,14 +115,20 @@
 }
 </style>
 <script>
+import ReusableModal from '@/components/User/Modal.vue';
+import Notification from '@/components/Notification.vue';
 import axios from 'axios';
 
 export default {
   components: {
+    Notification, ReusableModal,
   },
   data() {
     return {
       invoices: {},
+      isModalOpen: false,
+      selectedOption: '',
+
     };
   },
   mounted() {
@@ -140,6 +147,33 @@ export default {
         console.error('Error fetching invoice:', error);
         console.log('Retrieved invoices:', this.invoices);
 
+      }
+    },
+    openModal() {
+      this.isModalOpen = true;
+    },
+    closeModal() {
+      this.isModalOpen = false;
+    },
+    selectOption(option) {
+      this.selectedOption = option;
+      console.log(this.selectedOption);
+    },
+    async save() {
+      const cardElement = document.querySelector('#inv');
+
+      if (cardElement) {
+        try {
+          const canvas = await html2canvas(cardElement);
+          const imageData = canvas.toDataURL('image/png');
+
+          const link = document.createElement('a');
+          link.href = imageData;
+          link.download = 'invoice.png';
+          link.click();
+        } catch (error) {
+          console.error('Error saving image:', error);
+        }
       }
     },
   }

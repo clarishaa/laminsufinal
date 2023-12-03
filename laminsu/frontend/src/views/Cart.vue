@@ -99,10 +99,11 @@
                                         <div>
                                             <strong>Total amount</strong>
                                             <strong>
-                                                <p class="mb-0 text-break">(including VAT)</p>
+                                                <p class="mb-0 text-break">(including VAT 12%) </p>
                                             </strong>
                                         </div>
-                                        <span class="text-nowrap"><strong>₱ {{ TotalAmount() }}</strong></span>
+                                        <span class="text-nowrap"><strong>₱ {{ (Number(TotalAmount()) +
+                                            Number(TotalAmount() * 0.12)).toFixed(2) }}</strong></span>
                                     </li>
                                 </ul>
                                 <hr class="border border-primary border-2 opacity-75 mt-2">
@@ -180,6 +181,7 @@
         <button class="btn btn-primary mt-2" @click="checkout">Checkout</button>
 
     </ReusableModal>
+    
 
     <Notification ref="notification" />
 </template>
@@ -382,51 +384,54 @@ export default {
             console.log(this.selectedOption);
         },
         async checkout() {
-            try {
-                if (!this.selectedOption) {
-                    this.$refs.notification.error('Please select an order type.', 'error');
-                    return;
-                }
-                const user_id = sessionStorage.getItem("user_id");
+            const confirmed = window.confirm('Are you sure you want to proceed with the checkout? This action cannot be undone.');
+            if (confirmed) {
+                try {
+                    if (!this.selectedOption) {
+                        this.$refs.notification.error('Please select an order type.', 'error');
+                        return;
+                    }
+                    const user_id = sessionStorage.getItem("user_id");
 
-                const orderItems = this.checkedItems.map(cartId => {
-                    const cart = this.carts.find(cart => cart.cart_id === cartId);
-                    const item_id = cart ? cart.item_id : null;
+                    const orderItems = this.checkedItems.map(cartId => {
+                        const cart = this.carts.find(cart => cart.cart_id === cartId);
+                        const item_id = cart ? cart.item_id : null;
 
-                    return {
-                        item_id: item_id,
-                        quantity: cart ? cart.quantity : 0,
-                        total_price: this.getTotal(cart),
+                        return {
+                            item_id: item_id,
+                            quantity: cart ? cart.quantity : 0,
+                            total_price: this.getTotal(cart),
+                        };
+                    });
+
+                    const orderData = {
+                        user_id: user_id,
+                        order_type: this.selectedOption,
+                        delivery_address: this.address,
+                        order_details: this.details,
+                        status: 'pending',
+                        total_amount: this.TotalAmount(),
+                        items: orderItems,
                     };
-                });
 
-                const orderData = {
-                    user_id: user_id,
-                    order_type: this.selectedOption,
-                    delivery_address: this.address,
-                    order_details: this.details,
-                    status: 'pending',
-                    total_amount: this.TotalAmount(),
-                    items: orderItems,
-                };
+                    const response = await axios.post('checkout', orderData);
 
-                const response = await axios.post('checkout', orderData);
+                    console.log('Checkout Response:', response);
+                    this.invoice_id = response.data.invoice_id;
+                    console.log('Invoice ID:', this.invoice_id);
+                    this.checkedItems = [];
+                    this.closeModal();
+                    const inv = await axios.post(`getInvoice/${this.invoice_id}`);
 
-                console.log('Checkout Response:', response);
-                this.invoice_id = response.data.invoice_id;
-                console.log('Invoice ID:', this.invoice_id);
-                this.checkedItems = [];
-                this.closeModal();
-                const inv = await axios.post(`getInvoice/${this.invoice_id}`);
+                    setTimeout(() => {
+                        this.$refs.notification.open(response.data.message, 'success');
+                        this.$router.push({ name: 'invoice', params: { invoice_id: this.invoice_id } });
 
-                setTimeout(() => {
-                    this.$refs.notification.open(response.data.message, 'success');
-                    this.$router.push({ name: 'invoice', params: { invoice_id: this.invoice_id } });
-
-                }, 0);
-            } catch (error) {
-                console.error('Checkout Error:', error);
-                this.$refs.notification.error(error.response.data.message, 'error');
+                    }, 0);
+                } catch (error) {
+                    console.error('Checkout Error:', error);
+                    this.$refs.notification.error(error.response.data.message, 'error');
+                }
             }
         }
     }
