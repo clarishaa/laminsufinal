@@ -1,6 +1,6 @@
 <template>
   <!-- Facts Start -->
-  <div class="container-fluid facts my-5 py-5" data-parallax="scroll" :data-image-src="require('@/assets/img/carousel-1.jpg/')">
+  <div class="container-fluid facts my-5 py-5" data-parallax="scroll"     :data-image-src="isLargeScreen ? require('@/assets/img/carousel-1.jpg/') : null">
     <div class="container py-5">
       <div class="row g-5">
         <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
@@ -26,5 +26,26 @@
 </template>
 
 <script>
-
+export default {
+  data() {
+    return {
+      isLargeScreen: window.innerWidth >= 1024, // Adjust the threshold as needed
+    };
+  },
+  mounted() {
+    // Add a resize event listener to update the screen size flag
+    window.addEventListener('resize', this.handleResize);
+  },
+  destroyed() {
+    // Remove the resize event listener when the component is destroyed
+    window.removeEventListener('resize', this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      // Update the screen size flag based on the window width
+      this.isLargeScreen = window.innerWidth >= 1024; // Adjust the threshold as needed
+    },
+  },
+};
 </script>
+

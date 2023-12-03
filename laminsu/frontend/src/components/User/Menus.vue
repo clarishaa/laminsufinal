@@ -22,7 +22,7 @@
                     <div class="portfolio-wrapper">
                         <div class="portfolio-inner rounded">
                             <!-- Image -->
-                            <img class="img-fluid menu" style="width: 100%; max-width: 200px; height: 200px;"
+                            <img class="img-fluid menu"
                                 :src="require('@/assets/img/' + menu.img_path)" alt="" />
 
                             <!-- Description -->
@@ -100,7 +100,7 @@ export default {
             try {
                 const user_id = sessionStorage.getItem("user_id");
                 const response = await axios.post("addCart", { item_id: item_id, user_id: user_id });
-                this.$refs.notification.open(response.data.message, 'success');
+                this.$refs.notification.open(response.data.message, 'error');
 
 
             } catch (error) {

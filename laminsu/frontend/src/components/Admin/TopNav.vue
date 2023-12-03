@@ -13,7 +13,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown">User Management</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="/features" class="dropdown-item">Staff Management</a>
+                        <a href="/admin/staff" class="dropdown-item">Staff Management</a>
                         <a href="/booking" class="dropdown-item">Customer Management</a>
                     </div>
                 </div>

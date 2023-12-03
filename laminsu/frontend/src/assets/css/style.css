@@ -248,6 +248,7 @@ h6,
         height: 100%;
         object-fit: cover;
     }
+    
 }
 
 .page-header {
@@ -358,6 +359,34 @@ h6,
     white-space: nowrap;
     overflow: hidden;
     transition: .3s;
+}
+.portfolio-item {
+    width: 16.666%;
+}
+
+.portfolio-item img.menu {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    .portfolio-item {
+        width: 25%;
+        margin: 0 auto; 
+    }
+
+    .portfolio-item img.menu {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 40%;
+        margin: 0 auto;
+    }
 }
 
 .service-item:hover .service-text .btn {

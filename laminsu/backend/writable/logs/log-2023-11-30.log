@@ -1,0 +1,408 @@
+CRITICAL - 2023-11-30 02:54:38 --> ini_set(): A session is active. You cannot change the session module's ini settings at this time
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): A session is active. You cannot change the session module\'s ini settings at this time', 'C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\system\\Session\\Handlers\\FileHandler.php', 72, [...])
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(72): ini_set('session.save_path', 'C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\Session), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(996): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\CodeIgniter.php(1069): session()
+10 SYSTEMPATH\CodeIgniter.php(549): CodeIgniter\CodeIgniter->storePreviousURL(Object(CodeIgniter\HTTP\SiteURI))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 02:56:24 --> ini_set(): A session is active. You cannot change the session module's ini settings at this time
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): A session is active. You cannot change the session module\'s ini settings at this time', 'C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\system\\Session\\Handlers\\FileHandler.php', 72, [...])
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(72): ini_set('session.save_path', 'C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\Session), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(996): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\CodeIgniter.php(1069): session()
+10 SYSTEMPATH\CodeIgniter.php(549): CodeIgniter\CodeIgniter->storePreviousURL(Object(CodeIgniter\HTTP\SiteURI))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 02:56:26 --> ini_set(): A session is active. You cannot change the session module's ini settings at this time
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): A session is active. You cannot change the session module\'s ini settings at this time', 'C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\system\\Session\\Handlers\\FileHandler.php', 72, [...])
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(72): ini_set('session.save_path', 'C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\Session), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(996): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\CodeIgniter.php(1069): session()
+10 SYSTEMPATH\CodeIgniter.php(549): CodeIgniter\CodeIgniter->storePreviousURL(Object(CodeIgniter\HTTP\SiteURI))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:44:06 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:45:00 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:46:27 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:47:01 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:49:04 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:49:05 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:50:09 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:51:23 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:54:47 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:57:44 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:57:51 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:57:52 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:58:10 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 04:58:25 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 05:00:52 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 05:01:01 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 05:01:52 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-11-30 05:02:55 --> Call to a member function where() on null
+in APPPATH\Controllers\MainController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-11-30 05:04:50 --> mysqli_sql_exception: Unknown column 'people' in 'field list' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ta...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(75): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->book()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-11-30 05:04:50 --> Unknown column 'people' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_book` (`user_id`, `table_id`, `booktime`, `bookdate`, `people`, `message`) VALUES (:user_id:, :table_id:, :booktime:, :bookdate:, :people:, :message:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(75): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-11-30 05:06:15 --> mysqli_sql_exception: Unknown column 'people' in 'field list' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ta...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(81): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->book()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-11-30 05:06:15 --> Unknown column 'people' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_book` (`user_id`, `table_id`, `booktime`, `bookdate`, `people`, `message`) VALUES (:user_id:, :table_id:, :booktime:, :bookdate:, :people:, :message:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(81): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-11-30 05:08:14 --> mysqli_sql_exception: Unknown column 'people' in 'field list' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ta...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(69): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->book()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-11-30 05:08:14 --> Unknown column 'people' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_book` (`user_id`, `booktime`, `bookdate`, `people`, `message`, `table_id`) VALUES (:user_id:, :booktime:, :bookdate:, :people:, :message:, :table_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(69): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->book()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-11-30 07:36:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(258): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(258): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-30 07:36:41 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainController.php(258): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-11-30 07:36:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(258): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(258): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-30 07:36:56 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainController.php(258): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-11-30 13:11:15 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(258): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(258): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-30 13:11:15 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainController.php(258): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')

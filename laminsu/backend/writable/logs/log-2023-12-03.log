@@ -1,0 +1,72 @@
+CRITICAL - 2023-12-03 02:35:04 --> Argument 2 passed to CodeIgniter\RESTful\ResourceController::respond() must be of the type int or null, object given, called in C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\CheckoutController.php on line 108
+in SYSTEMPATH\API\ResponseTrait.php on line 87.
+ 1 APPPATH\Controllers\CheckoutController.php(108): CodeIgniter\RESTful\ResourceController->respond([...], Object(CodeIgniter\Database\MySQLi\Result), 200)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->invoice('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-03 02:35:06 --> Argument 2 passed to CodeIgniter\RESTful\ResourceController::respond() must be of the type int or null, object given, called in C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\CheckoutController.php on line 108
+in SYSTEMPATH\API\ResponseTrait.php on line 87.
+ 1 APPPATH\Controllers\CheckoutController.php(108): CodeIgniter\RESTful\ResourceController->respond([...], Object(CodeIgniter\Database\MySQLi\Result), 200)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->invoice('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-03 02:35:42 --> Argument 2 passed to CodeIgniter\RESTful\ResourceController::respond() must be of the type int or null, array given, called in C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\CheckoutController.php on line 109
+in SYSTEMPATH\API\ResponseTrait.php on line 87.
+ 1 APPPATH\Controllers\CheckoutController.php(109): CodeIgniter\RESTful\ResourceController->respond([...], [...], 200)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->invoice('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-03 02:35:43 --> Argument 2 passed to CodeIgniter\RESTful\ResourceController::respond() must be of the type int or null, array given, called in C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\CheckoutController.php on line 109
+in SYSTEMPATH\API\ResponseTrait.php on line 87.
+ 1 APPPATH\Controllers\CheckoutController.php(109): CodeIgniter\RESTful\ResourceController->respond([...], [...], 200)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->invoice('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-03 02:35:44 --> Argument 2 passed to CodeIgniter\RESTful\ResourceController::respond() must be of the type int or null, array given, called in C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\CheckoutController.php on line 109
+in SYSTEMPATH\API\ResponseTrait.php on line 87.
+ 1 APPPATH\Controllers\CheckoutController.php(109): CodeIgniter\RESTful\ResourceController->respond([...], [...], 200)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->invoice('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-03 02:35:44 --> Argument 2 passed to CodeIgniter\RESTful\ResourceController::respond() must be of the type int or null, array given, called in C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\CheckoutController.php on line 109
+in SYSTEMPATH\API\ResponseTrait.php on line 87.
+ 1 APPPATH\Controllers\CheckoutController.php(109): CodeIgniter\RESTful\ResourceController->respond([...], [...], 200)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->invoice('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-03 02:35:44 --> Argument 2 passed to CodeIgniter\RESTful\ResourceController::respond() must be of the type int or null, array given, called in C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\CheckoutController.php on line 109
+in SYSTEMPATH\API\ResponseTrait.php on line 87.
+ 1 APPPATH\Controllers\CheckoutController.php(109): CodeIgniter\RESTful\ResourceController->respond([...], [...], 200)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->invoice('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-03 02:35:44 --> Argument 2 passed to CodeIgniter\RESTful\ResourceController::respond() must be of the type int or null, array given, called in C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\CheckoutController.php on line 109
+in SYSTEMPATH\API\ResponseTrait.php on line 87.
+ 1 APPPATH\Controllers\CheckoutController.php(109): CodeIgniter\RESTful\ResourceController->respond([...], [...], 200)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->invoice('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-03 02:35:44 --> Argument 2 passed to CodeIgniter\RESTful\ResourceController::respond() must be of the type int or null, array given, called in C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\CheckoutController.php on line 109
+in SYSTEMPATH\API\ResponseTrait.php on line 87.
+ 1 APPPATH\Controllers\CheckoutController.php(109): CodeIgniter\RESTful\ResourceController->respond([...], [...], 200)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->invoice('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')

@@ -13,6 +13,9 @@ import Testimonials from "../components/User/Testimonials.vue";
 import Contact from "../components/User/Contact.vue";
 import Admin from "../views/Admin.vue";
 import Cart from "../views/Cart.vue";
+import Dashboard from "../components/Admin/Dashboard";
+import Staff from "../components/Admin/Staff";
+import Invoice from "../components/Invoice";
 
 const routes = [
   {
@@ -42,12 +45,16 @@ const routes = [
       { path: "testimonials", component: Testimonials },
       { path: "contact", component: Contact },
       { path: "cart", component: Cart },
+      { path: "getInvoice/:invoice_id", component: Invoice , name: "invoice"},
     ],
   },
   {
     path: "/admin/",
     component: Admin,
-    children: [{ path: "", component: Admin }],
+    children: [
+      { path: "", component: Dashboard },
+      { path: "staff", component: Staff }
+    ],
   },
 ];
 

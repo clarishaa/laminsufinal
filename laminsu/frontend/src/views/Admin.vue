@@ -1,10 +1,11 @@
 <template>
     <Headd />
+
     <body class="sb-nav-fixed">
-<Topnav/>
+        <Topnav />
         <div id="layoutSidenav">
-<!-- <Sidenav/> -->
-<Dashboard/>
+            <!-- <Sidenav/> -->
+            <router-view />
         </div>
     </body>
 </template>
@@ -18,7 +19,7 @@ export default {
     name: "Admin",
 
     components: {
-      Headd,Topnav,  Dashboard,
+        Headd, Topnav, Dashboard,
     },
 
     mounted() {
@@ -34,6 +35,18 @@ export default {
                 '/assets/demo/chart-area-demo.js',
                 '/assets/demo/chart-bar-demo.js',
                 '/js/datatables-simple-demo.js',
+                '/datatables/jq.js',
+                '/datatables/dt.js',
+                '/datatables/editor.js',
+                '/datatables/select.js',
+                '/datatables/datetime.js',
+                '/datatables/reorder.js',
+                '/datatables/buttons.js',
+                '/datatables/jszip.js',
+                '/datatables/pdf.js',
+                '/datatables/font.js',
+                '/datatables/bhtml.js',
+                '/datatables/print.js',
             ];
 
             const head = document.getElementsByTagName('head')[0];

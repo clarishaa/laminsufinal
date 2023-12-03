@@ -1,34 +1,34 @@
-<template></template>
+<!-- Notification.vue -->
+
+<template>
+    <div></div>
+  </template>
   
-<script>
-export default {
+  <script>
+  export default {
     methods: {
-        open(message) {
-            this.$toast.open({
-                message: message,
-                type: "success",
-                duration: 1000,
-                dismissible: true
-            })
-        },
-        error(message) {
-            this.$toast.error({
-                message: message,
-                type: "error",
-                duration: 1000,
-                dismissible: true,
-                position: 'top-right',
-            })
-        },
-        warning(message) {
-            this.$toast.warning({
-                message: message,
-                type: "error",
-                duration: 1000,
-                dismissible: true,
-                position: 'top-right',
-            })
-        },
-    }
-};
-</script>
+      showNotification(message, type, duration = 1000, dismissible = true, position = 'top-right') {
+        this.$toast.open({
+          message: message,
+          type: type,
+          duration: duration,
+          dismissible: dismissible,
+          position: position,
+        });
+      },
+  
+      open(message) {
+        this.showNotification(message, 'success');
+      },
+  
+      error(message) {
+        this.showNotification(message, 'error', 1000, true, 'top-right');
+      },
+  
+      warning(message) {
+        this.showNotification(message, 'warning', 1000, true, 'top-right');
+      },
+    },
+  };
+  </script>
+  

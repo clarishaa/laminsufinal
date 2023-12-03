@@ -1,7 +1,7 @@
 <template>
     <!-- Booking Start -->
     <div class="container-fluid quote my-5 py-5" data-parallax="scroll"
-        :data-image-src="require('@/assets/img/carousel-2.jpg/')">
+        :data-image-src="isLargeScreen ? require('@/assets/img/carousel-2.jpg/') : null">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
@@ -25,9 +25,25 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-floating">
-                                        <input type="number" class="form-control bg-light border-0"
-                                            placeholder="Number of People" v-model="people" required>
-                                        <label for="numOfPeople">Number of People</label>
+                                        <input type="button" class="form-control bg-light border-0"
+                                            placeholder="Choose Table" @click="openModal" v-model="selectedTable">
+                                        <label for="e">Table</label>
+                                        <ReusableModal :show="isModalOpen" @close="closeModal">
+                                            <div class="row">
+                                                <div class="col-md-6" v-for="table in tables" :key="table.table_id">
+                                                    <div class="card mb-1 card-hover" @click="selectTable(table.table_id)">
+                                                        <div class="card-body"
+                                                            :class="{ 'card-selected': isSelected(table) }">
+                                                            <h5 class="card-title text-center">Table {{ table.table_number
+                                                            }}</h5>
+                                                            <p class="card-text text-center">{{ table.description }}</p>
+                                                            <p class="card-text text-center">Capacity: {{ table.capacity }} People</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </ReusableModal>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -53,39 +69,84 @@
 </template>
 <script>
 import Notification from '@/components/Notification.vue';
+import ReusableModal from '@/components/User/Modal.vue';
+
 import axios from 'axios';
 export default {
     name: 'Booking',
     components: {
-        Notification
+        Notification, ReusableModal
     },
     data() {
         return {
+            isLargeScreen: window.innerWidth >= 1024,
             rtime: '',
             rdate: '',
             people: '',
+            isModalOpen: false,
+            selectedTable: '',
+            response:''
         };
     },
+    mounted() {
+        window.addEventListener('resize', this.handleResize);
+        this.getTable();
+    },
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize);
+    },
     methods: {
+        async getTable() {
+            const table = await axios.get("getTable");
+            this.tables = table.data;
+        },
         async book() {
-            try {
-                const user_id = sessionStorage.getItem("user_id");
-                const response = await axios.post("book", {
-                    rtime: this.rtime,
-                    rdate: this.rdate,
-                    people: this.people,
-                    message: this.message,
-                    user_id: user_id
-                })
-                this.$refs.notification.open(response.data.message, 'success');
-                this.$refs.book.reset();
-            } catch (error) {
-                this.$refs.notification.error(response.data.message, 'error');
-            }
+    try {
+        const user_id = sessionStorage.getItem("user_id");
+        const response = await axios.post("book", {
+            rtime: this.rtime,
+            rdate: this.rdate,
+            message: this.message,
+            table: this.selectedTable,
+            user_id: user_id
+        });
+
+        this.$refs.notification.open(response.data.message, 'success');
+        this.$refs.book.reset();
+    } catch (error) {
+        this.$refs.notification.error(error.response.data.message, 'error');
+    }
+},
+
+        handleResize() {
+            this.isLargeScreen = window.innerWidth >= 1024;
+        },
+        openModal() {
+            this.isModalOpen = true;
+        },
+        closeModal() {
+            this.isModalOpen = false;
+        },
+        selectTable(tableNumber) {
+            this.selectedTable = tableNumber;
+            this.closeModal();
+        },
+        isSelected(tableNumber) {
+            return this.selectedTable === tableNumber;
         }
     },
 };
 </script>
   
   
-  
+<style scoped>
+.card-hover:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.card-selected {
+    background-color: #007bff;
+    color: #fff;
+}
+</style>

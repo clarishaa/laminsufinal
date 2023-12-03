@@ -31,6 +31,7 @@ export default {
         '/lib/isotope/isotope.pkgd.min.js',
         '/lib/lightbox/js/lightbox.min.js',
         '/js/main.js',
+
       ];
 
       const head = document.getElementsByTagName('head')[0];

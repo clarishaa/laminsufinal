@@ -17,3 +17,9 @@ $routes->post('/book', 'MainController::book');
 $routes->post('/addCart', 'MainController::addCart');
 $routes->post('/addQuantity', 'MainController::addQuantity');
 $routes->post('/decQuantity', 'MainController::decQuantity');
+$routes->post('/addTestimonial', 'MainController::testimonial');
+$routes->get('/getTestimonial','MainController::getTestimonial');
+$routes->get('/getTable','MainController::getTable');
+$routes->post('/checkout', 'CheckoutController::checkout');
+$routes->match(['get', 'post'], '/getInvoice/(:num)', 'CheckoutController::invoice/$1');
+

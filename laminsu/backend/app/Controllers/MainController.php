@@ -10,12 +10,17 @@ use App\Models\MenuModel;
 use App\Models\CategoryModel;
 use App\Models\CartModel;
 use App\Models\BookModel;
+use App\Models\TableModel;
+use App\Models\TestimonialModel;
 
 class MainController extends ResourceController
 {
     protected $main;
     protected $book;
     protected $cart;
+    protected $testimonial;
+    protected $category;
+    protected $table;
 
     public function __construct()
     {
@@ -32,11 +37,25 @@ class MainController extends ResourceController
         $data = $this->main->findAll();
         return $this->respond($data, 200);
     }
+    public function getTable()
+    {
+        $this->table = new TableModel();
+        $data = $this->table->findAll();
+        return $this->respond($data, 200);
+    }
+
+    public function getTestimonial()
+    {
+        $this->testimonial = new TestimonialModel();
+        $data = $this->testimonial->findAll();
+        return $this->respond($data, 200);
+    }
 
     public function book()
     {
         $this->book = new BookModel();
         $json = $this->request->getJSON();
+        
 
         $data = [
             'user_id' => $json->user_id,
@@ -44,6 +63,7 @@ class MainController extends ResourceController
             'bookdate' => $json->rdate,
             'people' => $json->people,
             'message' => $json->message,
+            'table_id' => $json->table
         ];
 
         $book = $this->book->save($data);
@@ -51,6 +71,24 @@ class MainController extends ResourceController
             return $this->respond(['message' => 'Booking successful'], 200);
         } else {
             return $this->respond(['message' => 'Booking failed'], 500);
+        }
+    }
+
+    public function testimonial()
+    {
+        $this->testimonial = new TestimonialModel();
+        $json = $this->request->getJSON();
+
+        $data = [
+            'user_id' => $json->user_id,
+            'content' => $json->testimonial,
+        ];
+
+        $book = $this->testimonial->save($data);
+        if ($book) {
+            return $this->respond(['message' => 'Testimonial submitted'], 200);
+        } else {
+            return $this->respond(['message' => 'Testimonial submission failed'], 500);
         }
     }
 
@@ -91,8 +129,6 @@ class MainController extends ResourceController
 
     public function verification($length)
     {
-
-
         $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
         return substr(
             str_shuffle($str_result),
@@ -143,16 +179,16 @@ class MainController extends ResourceController
     {
         $this->cart = new CartModel();
         $json = $this->request->getJSON();
-    
+
         $item_id = $json->item_id;
         $user = $json->user_id;
-    
+
         $existing = $this->cart->where(['user_id' => $user, 'item_id' => $item_id])->first();
-    
+
         if ($existing) {
             $existing['quantity']++;
             $updateResult = $this->cart->update($existing['cart_id'], $existing);
-    
+
             if ($updateResult) {
                 return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
             } else {
@@ -166,26 +202,30 @@ class MainController extends ResourceController
     {
         $this->cart = new CartModel();
         $json = $this->request->getJSON();
-    
+
         $item_id = $json->item_id;
         $user = $json->user_id;
-    
+
         $existing = $this->cart->where(['user_id' => $user, 'item_id' => $item_id])->first();
-    
+
         if ($existing) {
-            $existing['quantity']--;
-            $updateResult = $this->cart->update($existing['cart_id'], $existing);
-    
-            if ($updateResult) {
-                return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
+            if ($existing['quantity'] > 1) {
+                $existing['quantity']--;
+                $updateResult = $this->cart->update($existing['cart_id'], $existing);
+
+                if ($updateResult) {
+                    return $this->respond(['message' => 'Item quantity updated in the cart'], 200);
+                } else {
+                    return $this->respond(['message' => 'Failed to update item quantity in the cart'], 500);
+                }
             } else {
-                return $this->respond(['message' => 'Failed to update item quantity in the cart'], 500);
+                return $this->respond(['message' => 'Item quantity cannot be less than 1'], 400);
             }
         } else {
             return $this->respond(['message' => 'Item not found in the cart'], 404);
         }
     }
-    
+
     public function getMenu()
     {
         $menu = new MenuModel();
@@ -202,10 +242,9 @@ class MainController extends ResourceController
     {
         $cart = new CartModel();
         $data = $cart->where('user_id', $user_id)->findAll();
-        
         return $this->respond($data, 200);
     }
-    
+
 
     public function login()
     {

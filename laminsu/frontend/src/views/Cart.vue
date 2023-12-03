@@ -16,7 +16,7 @@
                             </div>
                             <!-- Single item -->
                             <div class="row">
-                                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                <div class="col-lg-3 col-md-12 mb-2 mb-lg-0">
                                     <!-- Image -->
                                     <div class="bg-image hover-overlay hover-zoom ripple rounded"
                                         data-mdb-ripple-color="light">
@@ -30,7 +30,7 @@
                                     <!-- Image -->
                                 </div>
 
-                                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                                <div class="col-lg-5 col-md-6 mb-2 mb-lg-0">
                                     <!-- Data -->
                                     <p><strong>{{ getItem(carts).name }}</strong></p>
                                     <p>Category: {{ getCategory(getItem(carts)).name }}</p>
@@ -45,7 +45,7 @@
                                     <!-- Data -->
                                 </div>
 
-                                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                                <div class="col-lg-4 col-md-6 mb-2 mb-lg-0">
                                     <!-- Quantity -->
                                     <div class="d-flex mb-4" style="max-width: 300px">
                                         <button class="btn btn-primary px-3 me-2"
@@ -56,7 +56,6 @@
                                         <div class="form-outline">
                                             <input id="form1" min="0" name="quantity" :value="carts.quantity" type="number"
                                                 class="form-control" />
-                                            <label class="form-label" for="form1">Quantity</label>
                                         </div>
 
                                         <button class="btn btn-primary px-3 ms-2"
@@ -76,25 +75,14 @@
                             </div>
                             <!-- Single item -->
 
-                            <hr class="my-4" />
+                            <hr class="my-2" />
 
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <p><strong>Expected shipping delivery</strong></p>
-                                <p class="mb-0">12.10.2020 - 14.10.2020</p>
-                            </div>
-                        </div>
-                        <div class="card mb-4 mb-lg-0">
-                            <div class="card-body">
-                                <p><strong>We accept</strong></p>
-
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3 footer">
+
+                    <div class="col-md-3 footer me-3">
                         <div class="card">
-                            <div class="card-header py-3">
+                            <div class="card-header py-2">
                                 <h5 class="mb-0">Summary</h5>
                             </div>
                             <div class="card-body">
@@ -104,10 +92,10 @@
                                         <span class="text-nowrap">Products</span>
                                         <span>{{ countCheck() }}</span>
                                     </li>
-                                    <hr class="my-4" />
+                                    <hr class="my-2" />
 
                                     <li
-                                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-2">
                                         <div>
                                             <strong>Total amount</strong>
                                             <strong>
@@ -117,42 +105,163 @@
                                         <span class="text-nowrap"><strong>₱ {{ TotalAmount() }}</strong></span>
                                     </li>
                                 </ul>
+                                <hr class="border border-primary border-2 opacity-75 mt-2">
 
-                                <button type="button" class="btn btn-primary btn-lg btn-block float-end">
+                                <button type="button" @click="openModal" class="btn btn-primary mt-3 float-end">
                                     Go to checkout
                                 </button>
+                                <div class="mb-2 mb-lg-0">
+                                    <div class="card-body d-flex align-items-center">
+                                        <p class="mb-0 me-2 text-xs"><strong>We accept</strong></p>
+
+                                        <!-- Cash Icon -->
+                                        <i class="fas fa-money-bill me-1 text-dark text-xs"></i>
+
+                                        <!-- Card Icons -->
+                                        <i class="fas fa-credit-card me-1 text-primary text-xs"></i>
+
+                                        <!-- GCash Icon -->
+                                        <i class="fas fa-mobile-alt me-1 text-success text-xs"></i>
+
+                                        <!-- PayMaya Icon -->
+                                        <i class="fas fa-wallet me-1 text-muted text-xs"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-
+                    <hr class="my-4 bg-secondary">
                 </div>
             </div>
         </div>
+
     </section>
+    <ReusableModal :show="isModalOpen" @close="closeModal" :selectedOption="selectedOption">
+        <div class="row">
+            <!-- Dine-In -->
+            <div class="col-12 col-md-4">
+                <div class="card mb-3 card-hover" @click="selectOption('dinein')">
+                    <div class="card-body" :class="{ 'selected': selectedOption === 'dinein' }">
+                        <h5 class="card-title text-center">Dine-in</h5>
+                        <p class="card-text text-center">Cozy ambiance,<br>delightful experience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Takeout -->
+            <div class="col-12 col-md-4">
+                <div class="card mb-3 card-hover" @click="selectOption('takeout')">
+                    <div class="card-body" :class="{ 'selected': selectedOption === 'takeout' }">
+                        <h5 class="card-title text-center">Takeout</h5>
+                        <p class="card-text text-center">Gourmet at home,<br>fresh and <br>flavorful.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delivery -->
+            <div class="col-12 col-md-4">
+                <div class="card mb-3 card-hover" @click="selectOption('delivery')">
+                    <div class="card-body" :class="{ 'selected': selectedOption === 'delivery' }">
+                        <h5 class="card-title text-center">Delivery</h5>
+                        <p class="card-text text-center">Diverse menu at your <br>doorstep.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <input class="form-control p-2 fs-6 mb-2" v-if="selectedOption === 'delivery'" v-model="address"
+            placeholder="Enter your address" />
+        <input class="form-control p-2 fs-6" v-model="details" placeholder="Message" />
+        <button class="btn btn-primary mt-2" @click="checkout">Checkout</button>
+        <button @click="openInv">invoice</button>
+    </ReusableModal>
+    
+    <Notification ref="notification" />
 </template>
-<style scoped>
+<style >
 .footer {
     position: fixed;
     bottom: 0;
     right: 0;
 }
+
+.card-hover:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: rgba(70, 177, 128, 0.1);
+}
+
+@media (max-width: 575.98px) {
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        height: 15rem;
+    }
+
+    .card-body {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    .text-sm {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .invoice-container {
+        max-width: 90%;
+        max-height: 70vh;
+        /* Adjust the max-height as needed */
+        overflow-y: auto;
+        max-height: 600px;
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+}
 </style>
 <script>
+import ReusableModal from '@/components/User/Modal.vue';
+import Notification from '@/components/Notification.vue';
 import axios from 'axios';
 
 export default {
+    components: {
+        Notification, ReusableModal, 
+    },
     data() {
         return {
             carts: [],
             items: [],
             categories: [],
-            checkedItems: []
+            checkedItems: [],
+            isModalOpen: false,
+            isInvOpen: false,
+            selectedOption: '',
+            address: '',
+            details: '',
+            invoices: [],
+            invoice_id: null,
         };
     },
     mounted() {
         this.fetchData();
     },
+
     methods: {
         async fetchData() {
             const user_id = sessionStorage.getItem("user_id");
@@ -171,7 +280,14 @@ export default {
                 console.error('Error fetching data:', error);
             }
         },
-
+        async getInvoice(invoice_id) {
+            try {
+                const response = await axios.get(`/getInvoice/${invoice_id}`);
+                this.invoices = response.data;
+            } catch (error) {
+                console.error('Error fetching invoice:', error);
+            }
+        },
         getItem(cart) {
             return this.items.find(item => item.item_id === cart.item_id) || {};
         },
@@ -182,7 +298,6 @@ export default {
             const item = this.getItem(cart);
             const total = (item.price || 0) * cart.quantity;
 
-            // Use toFixed to round to two decimal places
             return parseFloat(total.toFixed(2));
         },
 
@@ -209,7 +324,7 @@ export default {
                     this.fetchData();
                 })
                 .catch(error => {
-                    console.error('Error updating quantity:', error);
+                    this.$refs.notification.error(error.response.data.message, 'error');
                 });
         },
         countCart() {
@@ -230,15 +345,76 @@ export default {
         },
 
         TotalAmount() {
-                      let totalAmount = 0;
-                      this.checkedItems.forEach(cartId => {
-                            const cart = this.carts.find(cart => cart.cart_id === cartId);
-                            if (cart) {
-                                  totalAmount += this.getTotal(cart);
-                            }
-                      });
-                      return parseFloat(totalAmount.toFixed(2));
-                },
-    },
+            let totalAmount = 0;
+            this.checkedItems.forEach(cartId => {
+                const cart = this.carts.find(cart => cart.cart_id === cartId);
+                if (cart) {
+                    totalAmount += this.getTotal(cart);
+                }
+            });
+            return parseFloat(totalAmount.toFixed(2));
+        },
+        openModal() {
+            this.isModalOpen = true;
+        },
+        closeModal() {
+            this.isModalOpen = false;
+            this.address = ''
+        },
+        openInv() {
+            this.isInvOpen = true;
+        },
+        closeInv() {
+            this.isInvOpen = false;
+        },
+        selectOption(option) {
+            this.selectedOption = option;
+            console.log(this.selectedOption);
+        },
+        async checkout() {
+            try {
+                const user_id = sessionStorage.getItem("user_id");
+
+                const orderItems = this.checkedItems.map(cartId => {
+                    const cart = this.carts.find(cart => cart.cart_id === cartId);
+                    const item_id = cart ? cart.item_id : null;
+
+                    return {
+                        item_id: item_id,
+                        quantity: cart ? cart.quantity : 0,
+                        total_price: this.getTotal(cart),
+                    };
+                });
+
+                const orderData = {
+                    user_id: user_id,
+                    order_type: this.selectedOption,
+                    delivery_address: this.address,
+                    order_details: this.details,
+                    status: 'pending',
+                    total_amount: this.TotalAmount(),
+                    items: orderItems,
+                };
+
+                const response = await axios.post('checkout', orderData);
+
+                console.log('Checkout Response:', response);
+                this.invoice_id = response.data.invoice_id;
+                console.log('Invoice ID:', this.invoice_id);
+                this.checkedItems = [];
+                this.closeModal();
+                const inv = await axios.post(`getInvoice/${this.invoice_id}`);
+
+                setTimeout(() => {
+                    this.$refs.notification.open(response.data.message, 'success');
+                    this.$router.push({ name: 'invoice', params: { invoice_id: this.invoice_id } });
+
+                }, 0);
+            } catch (error) {
+                console.error('Checkout Error:', error);
+                this.$refs.notification.error(error.response.data.message, 'error');
+            }
+        }
+    }
 };
 </script>
