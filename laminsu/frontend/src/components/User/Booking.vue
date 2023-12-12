@@ -26,23 +26,24 @@
                                 <div class="col-sm-4">
                                     <div class="form-floating">
                                         <input type="button" class="form-control bg-light border-0"
-                                            placeholder="Choose Table" @click="openModal" v-model="selectedTable">
+                                            placeholder="Choose Table" @click="openModal" v-model="selectedTable" />
                                         <label for="e">Table</label>
+
                                         <ReusableModal :show="isModalOpen" @close="closeModal">
                                             <div class="row">
                                                 <div class="col-md-6" v-for="table in tables" :key="table.table_id">
-                                                    <div class="card mb-1 card-hover" @click="selectTable(table.table_id)">
+                                                    <div class="card mb-1 card-hover" @click="selectTable(table)">
                                                         <div class="card-body"
                                                             :class="{ 'card-selected': isSelected(table) }">
                                                             <h5 class="card-title text-center">Table {{ table.table_number
                                                             }}</h5>
                                                             <p class="card-text text-center">{{ table.description }}</p>
-                                                            <p class="card-text text-center">Capacity: {{ table.capacity }} People</p>
+                                                            <p class="card-text text-center">Capacity: {{ table.capacity }}
+                                                                People</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </ReusableModal>
                                     </div>
                                 </div>
@@ -85,7 +86,7 @@ export default {
             people: '',
             isModalOpen: false,
             selectedTable: '',
-            response:''
+            response: ''
         };
     },
     mounted() {
@@ -101,22 +102,22 @@ export default {
             this.tables = table.data;
         },
         async book() {
-    try {
-        const user_id = sessionStorage.getItem("user_id");
-        const response = await axios.post("book", {
-            rtime: this.rtime,
-            rdate: this.rdate,
-            message: this.message,
-            table: this.selectedTable,
-            user_id: user_id
-        });
+            try {
+                const user_id = sessionStorage.getItem("user_id");
+                const response = await axios.post("book", {
+                    rtime: this.rtime,
+                    rdate: this.rdate,
+                    message: this.message,
+                    table: this.selectedTable,
+                    user_id: user_id
+                });
 
-        this.$refs.notification.open(response.data.message, 'success');
-        this.$refs.book.reset();
-    } catch (error) {
-        this.$refs.notification.error(error.response.data.message, 'error');
-    }
-},
+                this.$refs.notification.open(response.data.message, 'success');
+                this.$refs.book.reset();
+            } catch (error) {
+                this.$refs.notification.error(error.response.data.message, 'error');
+            }
+        },
 
         handleResize() {
             this.isLargeScreen = window.innerWidth >= 1024;
@@ -127,13 +128,25 @@ export default {
         closeModal() {
             this.isModalOpen = false;
         },
-        selectTable(tableNumber) {
-            this.selectedTable = tableNumber;
-            this.closeModal();
-        },
-        isSelected(tableNumber) {
-            return this.selectedTable === tableNumber;
+        selectTable(table) {
+            console.log('Selected Table:', table);
+            if (this.isTableSelectable(table)) {
+                this.selectedTable = table.table_id;
+                this.closeModal();
+            } else {
+                console.log('Table is not selectable:', table);
+                this.$refs.notification.error("Selected table is unavailable.", 'error');
+            }
         }
+        ,
+        isTableSelectable(table) {
+            return table.is_available === '1' && parseInt(table.quantity, 10) > 0;
+
+        },
+
+        isSelected(table) {
+            return this.selectedTable === table.table_id;
+        },
     },
 };
 </script>

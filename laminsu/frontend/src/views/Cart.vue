@@ -181,7 +181,7 @@
         <button class="btn btn-primary mt-2" @click="checkout">Checkout</button>
 
     </ReusableModal>
-    
+
 
     <Notification ref="notification" />
 </template>
@@ -384,13 +384,14 @@ export default {
             console.log(this.selectedOption);
         },
         async checkout() {
-            const confirmed = window.confirm('Are you sure you want to proceed with the checkout? This action cannot be undone.');
-            if (confirmed) {
-                try {
-                    if (!this.selectedOption) {
-                        this.$refs.notification.error('Please select an order type.', 'error');
-                        return;
-                    }
+
+            try {
+                if (!this.selectedOption) {
+                    this.$refs.notification.error('Please select an order type.', 'error');
+                    return;
+                }
+                const confirmed = window.confirm('Are you sure you want to proceed with the checkout? This action cannot be undone.');
+                if (confirmed) {
                     const user_id = sessionStorage.getItem("user_id");
 
                     const orderItems = this.checkedItems.map(cartId => {
@@ -428,12 +429,14 @@ export default {
                         this.$router.push({ name: 'invoice', params: { invoice_id: this.invoice_id } });
 
                     }, 0);
-                } catch (error) {
-                    console.error('Checkout Error:', error);
-                    this.$refs.notification.error(error.response.data.message, 'error');
                 }
+
+            } catch (error) {
+                console.error('Checkout Error:', error);
+                this.$refs.notification.error(error.response.data.message, 'error');
             }
         }
+
     }
 };
 </script>

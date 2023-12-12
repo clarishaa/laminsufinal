@@ -97,6 +97,7 @@ export default {
       showMessage: false,
       emailError: '',
       passError: '',
+      user_type: 'customer', 
     };
   },
   computed: {
@@ -115,6 +116,8 @@ export default {
           first_name: this.first_name,
           mobile: this.mobile,
           password: this.password,
+          user_type: this.user_type,
+          position: null
         });
 
         console.log(response.data);

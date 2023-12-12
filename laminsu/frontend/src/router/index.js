@@ -15,7 +15,12 @@ import Admin from "../views/Admin.vue";
 import Cart from "../views/Cart.vue";
 import Dashboard from "../components/Admin/Dashboard";
 import Staff from "../components/Admin/Staff";
+import Reservations from "../components/Admin/Reservations";
 import Invoice from "../components/Invoice";
+import CancelledRes from "../components/Admin/CancelledRes";
+import ConfirmedRes from "../components/Admin/ConfirmedRes";
+import PayedRes from "../components/Admin/PayedRes";
+import Customer from "../components/Admin/Customer";
 
 const routes = [
   {
@@ -53,7 +58,13 @@ const routes = [
     component: Admin,
     children: [
       { path: "", component: Dashboard },
-      { path: "staff", component: Staff }
+      { path: "staff/:id?", component: Staff , name: "staff"},
+      { path: "pending-reservations/:id?", component: Reservations , name: "reservations"},
+      { path: "cancelled-reservations", component: CancelledRes },
+      { path: "confirmed-reservations", component: ConfirmedRes },
+      { path: "payed-reservations", component: PayedRes },
+      { path: "customer/:id?", component: Customer , name: "customer"},
+
     ],
   },
 ];

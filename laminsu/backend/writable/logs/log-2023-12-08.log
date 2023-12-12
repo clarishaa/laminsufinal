@@ -1,0 +1,1234 @@
+CRITICAL - 2023-12-08 05:27:44 --> Call to a member function find() on null
+in APPPATH\Controllers\StaffController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StaffController->fetchEmployee('75')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 05:28:29 --> Call to a member function find() on null
+in APPPATH\Controllers\StaffController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StaffController->fetchEmployee('75')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 05:31:29 --> Call to a member function find() on null
+in APPPATH\Controllers\StaffController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StaffController->fetchEmployee('75')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 05:36:44 --> Call to a member function find() on null
+in APPPATH\Controllers\StaffController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StaffController->fetchEmployee('75')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 05:37:48 --> Call to a member function find() on null
+in APPPATH\Controllers\StaffController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StaffController->fetchEmployee('75')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:58:30 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:58:31 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:58:41 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:58:41 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:58:41 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:58:41 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:58:56 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:58:56 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:59:04 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:59:04 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:59:10 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:59:10 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:59:16 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:59:16 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:59:30 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:59:30 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:59:33 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:59:33 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:59:37 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:59:37 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:59:38 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:59:38 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:59:45 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:59:45 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:59:50 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:59:50 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 07:59:57 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 07:59:57 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 08:00:06 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 08:00:06 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 08:00:37 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 08:00:37 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 08:00:47 --> mysqli_sql_exception: Table 'dblaminsu.book_table' doesn't exist in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 08:00:47 --> Table 'dblaminsu.book_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `book_table`
+JOIN `users` ON `book_table`.`user_id` = `users`.`user_id`', [], false)
+ 2 APPPATH\Controllers\ReservationController.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 09:09:03 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1726.
+ 1 SYSTEMPATH\BaseModel.php(1726): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\ReservationController.php(71): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->cancelRes('25')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 09:11:20 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\ReservationController.php(79): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->cancelRes('25')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 09:11:34 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\ReservationController.php(79): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->cancelRes('25')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 09:15:53 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\ReservationController.php(80): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->cancelRes('25')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 09:18:07 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\ReservationController.php(79): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->cancelRes('25')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 09:19:56 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\ReservationController.php(79): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->cancelRes('25')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-08 09:27:33 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\ReservationController.php(79): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->cancelRes('25')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:35:47 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:35:47 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:35:47 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:35:47 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:35:56 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:35:56 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:35:56 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:35:56 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:03 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:03 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:03 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:03 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:07 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:07 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:07 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:07 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:15 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:15 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:16 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:16 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:21 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:21 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:21 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:21 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:28 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:28 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:29 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:29 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:33 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:33 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:33 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:33 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:35 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:35 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:36:35 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:36:35 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:02 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:02 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:02 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:02 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:05 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:05 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:05 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:05 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:07 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:07 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:07 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:07 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:32 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:32 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:32 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:32 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:39 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:39 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:39 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:39 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:44 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:44 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-08 11:37:44 --> mysqli_sql_exception: Unknown column 'usertype' in 'where clause' in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-08 11:37:44 --> Unknown column 'usertype' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usertype` = :usertype:', [...], false)
+ 2 APPPATH\Controllers\ReservationController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReservationController->getReservations()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')

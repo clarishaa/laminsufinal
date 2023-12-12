@@ -115,6 +115,8 @@ class MainController extends ResourceController
                 'last_name' => $json->last_name,
                 'mobile' => $json->mobile,
                 'email' => $email,
+                'user_type' => $json->user_type,
+                'position' => $json->position,
                 'password' => password_hash($password, PASSWORD_BCRYPT),
                 'token' => $token,
             ];

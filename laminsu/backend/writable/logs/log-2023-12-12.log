@@ -1,0 +1,771 @@
+ERROR - 2023-12-12 09:41:44 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-12-12 09:41:44 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 09:41:48 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-12-12 09:41:48 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 09:41:52 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-12-12 09:41:52 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 09:41:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-12-12 09:41:56 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 09:42:03 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-12-12 09:42:03 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 09:42:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'dblaminsu', 3306, '', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->login()
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-12-12 09:42:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainController.php(280): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:47 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:47 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:48 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:48 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:48 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:48 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:49 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:49 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:49 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:49 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:49 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:49 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:50 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:50 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:50 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:50 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:57 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:57 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:58 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:58 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:59 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:59 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:59 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:59 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:08:59 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:08:59 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:09:00 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:09:00 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:09:00 --> mysqli_sql_exception: Column 'user_type' cannot be null in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\MainController.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\MainController->register()
+#10 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-12-12 10:09:00 --> Column 'user_type' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`first_name`, `last_name`, `mobile`, `email`, `user_type`, `position`, `password`, `token`) VALUES (:first_name:, :last_name:, :mobile:, :email:, :user_type:, :position:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MainController.php(124): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+ERROR - 2023-12-12 10:13:05 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`dblaminsu`.`table_book`, CONSTRAINT `table_book_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)) in C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 C:\laragon\www\laminsufinal\laminsu\backend\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 C:\laragon\www\laminsufinal\laminsu\backend\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\laminsufinal\laminsu\backend\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\laminsufinal\laminsu\backend\app\Controllers\CustomerController.php(64): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(942): App\Controllers\CustomerController->deleteCustomer('78')
+#8 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\laminsufinal\laminsu\backend\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\laminsufinal\laminsu\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-12-12 10:13:05 --> Cannot delete or update a parent row: a foreign key constraint fails (`dblaminsu`.`table_book`, CONSTRAINT `table_book_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `users`
+WHERE `user_id` IN :user_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\CustomerController.php(64): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CustomerController->deleteCustomer('78')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')

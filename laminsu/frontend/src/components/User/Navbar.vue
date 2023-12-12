@@ -9,30 +9,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="/" class="nav-item nav-link active">Home</a>
-                <a href="/about" class="nav-item nav-link">About</a>
-                <a href="/services" class="nav-item nav-link">Services</a>
-                <a href="/menu" class="nav-item nav-link">Menu</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="/features" class="dropdown-item">Features</a>
-                        <a href="/booking" class="dropdown-item">Book a Table</a>
-                        <a href="/reservation" class="dropdown-item">Get Event Reservation</a>
-                        <a href="/team" class="dropdown-item">Our Team</a>
-                        <a href="/testimonials" class="dropdown-item">Testimonials</a>
-                    </div>
-                </div>
-                <a href="/contact" class="nav-item nav-link">Contact</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown"><i
-                            class="fas fa-user fa-fw" style="color: forestgreen;"></i></a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="/settings" class="dropdown-item">Settings</a>
-                        <a href="/history" class="dropdown-item">Activity Log</a>
-                        <a href="/logout" class="dropdown-item">Logout</a>
-                    </div>
-                </div>
+                <router-link to="/" class="nav-item nav-link" :class="{ 'active': isRouteActive('/') }">Home</router-link>
+                <router-link to="/about" class="nav-item nav-link" :class="{ 'active': isRouteActive('/about') }">About</router-link>
+                <router-link to="/services" class="nav-item nav-link" :class="{ 'active': isRouteActive('/services') }">Services</router-link>
+                <router-link to="/menu" class="nav-item nav-link" :class="{ 'active': isRouteActive('/menu') }">Menu</router-link>
+                <router-link to="/booking" class="nav-item nav-link" :class="{ 'active': isRouteActive('/booking') }">Book a Table</router-link>
+                <router-link to="/team" class="nav-item nav-link" :class="{ 'active': isRouteActive('/team') }">Our Team</router-link>
+                <router-link to="/testimonials" class="nav-item nav-link" :class="{ 'active': isRouteActive('/testimonials') }">Testimonials</router-link>
+                <router-link to="/contact" class="nav-item nav-link" :class="{ 'active': isRouteActive('/contact') }">Contact</router-link>
             </div>
             <a href="/cart" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Go to Cart<i
                     class="fa fa-arrow-right ms-3"></i></a>
@@ -40,3 +24,13 @@
     </nav>
     <!-- Navbar End -->
 </template>
+
+<script>
+export default {
+    methods: {
+        isRouteActive(route) {
+            return this.$route.path === route;
+        }
+    }
+};
+</script>

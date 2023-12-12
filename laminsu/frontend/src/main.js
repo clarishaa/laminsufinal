@@ -6,6 +6,7 @@ import axios from 'axios'
 import VueToast from "vue-toast-notification";
 import 'vue-toast-notification/dist/theme-sugar.css';
 
+
 axios.defaults.baseURL = 'http://localhost:8080/';
 
 createApp(App)

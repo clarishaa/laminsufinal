@@ -3,10 +3,10 @@
     <div class="col-md-12" style="margin-top: 6rem;">
       <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-          <h4>Staff Management</h4>
+          <h4>Customer Management</h4>
           <a class="btn btn-primary ms-auto" @click="openModal()" data-bs-toggle="modal" data-bs-target="#editModal"
             data-bs-placement="top" title="Add">
-            Add Employee
+            Add Customer
           </a>
         </div>
 
@@ -18,7 +18,6 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Mobile</th>
-                <th data-priority="2">Position</th>
                 <th>Email</th>
                 <th class="text-center">Action</th>
               </tr>
@@ -29,7 +28,6 @@
                 <td>{{ staff.first_name }}</td>
                 <td>{{ staff.last_name }}</td>
                 <td>{{ staff.mobile }}</td>
-                <td>{{ staff.position }}</td>
                 <td>{{ staff.email }}</td>
                 <td class="text-center">
                   <a class="btn btn-primary me-2" @click="openModal(staff.user_id)" data-bs-toggle="modal"
@@ -83,18 +81,6 @@
               required pattern="[0-9]{11}" maxlength="11">
             <label for="floatingInput">Mobile Number</label>
           </div>
-          <div class="form-floating mb-3">
-            <label for="position">Position</label>
-            <select class="form-select" id="position" v-model="position">
-              <option value="" disabled selected>Select a Position</option>
-              <option value="waiter">Waiter</option>
-              <option value="bartender">Bartender</option>
-              <option value="chef">Chef</option>
-              <option value="host">Host/Hostess</option>
-              <option value="cashier">Cashier</option>
-              <option value="delivery">Delivery</option>
-            </select>
-          </div>
           <!-- Password -->
           <div v-if="!isUpdate" class="form-floating mb-3">
             <input type="password" @input="clearError" class="form-control" id="floatingPassword" placeholder="Password"
@@ -135,7 +121,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Are you sure you want to delete this staff member?
+          Are you sure you want to delete this user?
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -169,10 +155,9 @@ export default {
       showMessage: false,
       emailError: '',
       passError: '',
-      position: '',
-      user_type: 'staff',
+      user_type: 'customer',
       isUpdate: false,
-      modalTitle: 'Add Employee',
+      modalTitle: 'Add Customer',
       submitButtonText: 'Add',
     };
   },
@@ -189,11 +174,11 @@ export default {
   },
   methods: {
     async getStaff() {
-      const staff = await axios.get("getStaff");
+      const staff = await axios.get("getCustomer");
       this.staffs = staff.data;
     },
     async getData() {
-      const staff = await axios.get("getStaff");
+      const staff = await axios.get("getCustomer");
       this.staffs = staff.data;
       this.$nextTick(() => {
         $(this.$refs.dataTable).DataTable({
@@ -207,46 +192,44 @@ export default {
     async openModal(id = null) {
       if (id) {
         try {
-          const response = await axios.get(`fetchEmployee/${id}`);
+          const response = await axios.get(`fetchCustomer/${id}`);
           const employeeData = response.data;
 
           this.isUpdate = true;
-          this.modalTitle = 'Edit Employee';
+          this.modalTitle = 'Edit Customer';
           this.submitButtonText = 'Save Changes';
           this.employeeId = id;
           this.username = employeeData.email;
           this.last_name = employeeData.last_name;
           this.first_name = employeeData.first_name;
           this.mobile = employeeData.mobile;
-          this.position = employeeData.position;
 
-          this.$router.push({ name: 'staff', params: { id: id } });
+          this.$router.push({ name: 'customer', params: { id: id } });
         } catch (error) {
-          console.error('Error fetching employee data:', error);
+          console.error('Error fetching customer data:', error);
         }
       } else {
         this.isUpdate = false;
-        this.modalTitle = 'Add Employee';
+        this.modalTitle = 'Add Customer';
         this.submitButtonText = 'Add';
         this.employeeId = null;
 
-        this.$router.push({ name: 'staff' });
+        this.$router.push({ name: 'customer' });
       }
     },
 
     async register() {
       if (this.isUpdate) {
         try {
-          await axios.put(`updateStaff/${this.$route.params.id}`, {
+          await axios.put(`updateCustomer/${this.$route.params.id}`, {
             username: this.username,
             last_name: this.last_name,
             first_name: this.first_name,
             mobile: this.mobile,
             user_type: this.user_type,
-            position: this.position
           });
           this.closeModal();
-          this.$refs.notification.open("Employee info updated.", 'success');
+          this.$refs.notification.open("Customer info updated.", 'success');
         } catch (error) {
           console.log(error);
         }
@@ -259,13 +242,12 @@ export default {
             mobile: this.mobile,
             password: this.password,
             user_type: this.user_type,
-            position: this.position
           });
 
           console.log(response.data);
           this.showMessage = false;
           this.closeModal();
-          this.$refs.notification.open("Employee added.", 'success');
+          this.$refs.notification.open("Customer added.", 'success');
         } catch (error) {
           console.error(error);
           if (error.response && error.response.status === 400) {
@@ -286,7 +268,7 @@ export default {
 
     },
     closeModal() {
-      this.$router.push({ name: 'staff' });
+      this.$router.push({ name: 'customer' });
       $('#editModal').modal('hide');
     },
     clearError() {
@@ -305,13 +287,13 @@ export default {
     },
     async deleteStaff(userId) {
       try {
-        await axios.delete(`deleteStaff/${userId}`);
+        await axios.delete(`deleteCustomer/${userId}`);
         this.$refs.notification.open("Deleted successfully.", 'success');
         this.getStaff();
       } catch (error) {
         console.log(error);
       }
-      this.$router.push({ name: 'staff' });
+      this.$router.push({ name: 'customer' });
     }
   },
 
