@@ -34,7 +34,8 @@
                                     <!-- Data -->
                                     <p><strong>{{ getItem(carts).name }}</strong></p>
                                     <p>Category: {{ getCategory(getItem(carts)).name }}</p>
-                                    <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
+                                    <button type="button" @click="deleteItem(carts.cart_id)"
+                                        class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
                                         title="Remove item">
                                         <i class="fas fa-trash"></i>
                                     </button>
@@ -435,6 +436,11 @@ export default {
                 console.error('Checkout Error:', error);
                 this.$refs.notification.error(error.response.data.message, 'error');
             }
+        },
+        async deleteItem(itemId) {
+            await axios.delete(`/deleteCart/${itemId}`);
+            this.$refs.notification.open("Deleted successfully.", 'success');
+            this.fetchData();
         }
 
     }

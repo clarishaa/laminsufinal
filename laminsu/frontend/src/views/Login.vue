@@ -7,13 +7,13 @@
             <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
             <form @submit.prevent="login">
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" @input="clearError" 
-                  v-model="username" required>
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                  @input="clearError" v-model="username" required>
                 <label for="floatingInput">Email address</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="password" class="form-control" @input="clearError" id="floatingPassword" placeholder="Password"
-                  v-model="password" required>
+                <input type="password" class="form-control" @input="clearError" id="floatingPassword"
+                  placeholder="Password" v-model="password" required>
                 <label for="floatingPassword">Password</label>
               </div>
               <div v-if="errorMessage" class="text-white text-center mb-3 p-2 bg-danger rounded small">
@@ -74,9 +74,16 @@ export default {
           if (response.data.message === 'Login successful') {
             sessionStorage.setItem("token", response.data.token);
             sessionStorage.setItem("user_id", response.data.user_id);
-            router.push('/');
+
+            if (response.data.user_type === 'admin') {
+              router.push('/admin');
+            } else {
+              router.push('/');
+
+            }
           }
         })
+
         .catch((error) => {
           console.error(error);
           this.errorMessage = 'Invalid email or password, try again!';

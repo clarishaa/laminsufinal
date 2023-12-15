@@ -284,8 +284,14 @@ class MainController extends ResourceController
                 $auth = password_verify($password, $pass);
 
                 if ($auth) {
-                    return $this->respond(['message' => 'Login successful', 'token' => $data['token'], 'user_id' => $data['user_id']], 200);
-                } else {
+                    $_SESSION['user_type'] = $data['user_type'];
+
+                    return $this->respond([
+                        'message' => 'Login successful',
+                        'token' => $data['token'],
+                        'user_id' => $data['user_id'],
+                        'user_type' => $data['user_type'],
+                    ], 200);                } else {
                     return $this->respond(['error' => 'Invalid email or password'], 401);
                 }
             } else {

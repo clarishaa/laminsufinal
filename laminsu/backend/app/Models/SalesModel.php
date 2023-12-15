@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MenuModel extends Model
+class SalesModel extends Model
 {
-    protected $table            = 'items';
-    protected $primaryKey       = 'item_id';
+    protected $table            = 'audit';
+    protected $primaryKey       = 'audit_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [	'name',	'price',	'category_id',	'description', 'img_path',  'quantity'];
+    protected $allowedFields    = ['item_id',	'oldQuantity',	'quantity',	'type',	];
 
     // Dates
     protected $useTimestamps = false;

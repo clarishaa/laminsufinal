@@ -14,7 +14,7 @@ use App\Models\TableModel;
 use App\Models\OrderItemsModel;
 use App\Models\OrderModel;
 use App\Models\InvoiceModel;
-use App\Models\DiscountModel;
+use App\Models\SalesModel;
 
 
 class CheckoutController extends ResourceController
@@ -27,6 +27,7 @@ class CheckoutController extends ResourceController
 
     protected $discount;
     protected $items;
+    protected $audit;
 
     public function __construct()
     {
@@ -43,6 +44,7 @@ class CheckoutController extends ResourceController
         $this->orders = new OrderModel();
         $this->items = new MenuModel();
         $this->carts = new CartModel();
+        $this->audit = new SalesModel();
 
         $json = $this->request->getJSON();
         $user_id = $json->user_id;
@@ -68,6 +70,21 @@ class CheckoutController extends ResourceController
             ];
 
             $this->orderitems->save($orderitem);
+
+            $product = $this->items->find($item->item_id);
+            if ($product) {
+                $newQuantity = $product['quantity'] - $item->quantity;
+                $this->items->update($item->item_id, ['quantity' => $newQuantity]);
+
+                $auditM = new SalesModel();
+                $auditdata = [
+                    'item_id' => $item->item_id,
+                    'oldQuantity' => $product['quantity'],
+                    'quantity' => $newQuantity,
+                    'type' => 'sold'
+                ];
+                $auditM->save($auditdata);
+            }
         }
 
         $prefix = 'LMCC';
@@ -151,5 +168,15 @@ class CheckoutController extends ResourceController
         $this->carts->where('item_id', $item['item_id'])->delete();
 
         return $this->respond(['message' => 'Payment successful'], 200);
+    }
+
+    public function deleteCart($id = null)
+    {
+        $model = new CartModel();
+        $findById = $model->find(['cart_id' => $id]);
+        if (!$findById) return $this->fail('No Data Found', 404);
+        $product = $model->delete($id);
+        if (!$product) return $this->fail('Failed Deleted', 400);
+        return $this->respondDeleted('Deleted Successfully');
     }
 }

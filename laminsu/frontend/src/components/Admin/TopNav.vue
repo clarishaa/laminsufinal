@@ -17,7 +17,7 @@
                         <a href="/admin/customer" class="dropdown-item">Customer Management</a>
                     </div>
                 </div>
-                <a href="/" class="nav-item nav-link fs-6">Inventory</a>
+                <a href="/admin/inventory" class="nav-item nav-link fs-6">Inventory</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown">Reservations</a>
                     <div class="dropdown-menu bg-light m-0">
