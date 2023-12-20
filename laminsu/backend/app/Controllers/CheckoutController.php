@@ -71,20 +71,6 @@ class CheckoutController extends ResourceController
 
             $this->orderitems->save($orderitem);
 
-            $product = $this->items->find($item->item_id);
-            if ($product) {
-                $newQuantity = $product['quantity'] - $item->quantity;
-                $this->items->update($item->item_id, ['quantity' => $newQuantity]);
-
-                $auditM = new SalesModel();
-                $auditdata = [
-                    'item_id' => $item->item_id,
-                    'oldQuantity' => $product['quantity'],
-                    'quantity' => $newQuantity,
-                    'type' => 'sold'
-                ];
-                $auditM->save($auditdata);
-            }
         }
 
         $prefix = 'LMCC';

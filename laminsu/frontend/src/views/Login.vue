@@ -77,6 +77,9 @@ export default {
 
             if (response.data.user_type === 'admin') {
               router.push('/admin');
+            }
+            else if (response.data.user_type === 'staff') {
+              router.push('/admin/pos');
             } else {
               router.push('/');
 

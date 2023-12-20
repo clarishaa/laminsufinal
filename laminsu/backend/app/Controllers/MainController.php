@@ -291,7 +291,8 @@ class MainController extends ResourceController
                         'token' => $data['token'],
                         'user_id' => $data['user_id'],
                         'user_type' => $data['user_type'],
-                    ], 200);                } else {
+                    ], 200);
+                } else {
                     return $this->respond(['error' => 'Invalid email or password'], 401);
                 }
             } else {
@@ -300,5 +301,11 @@ class MainController extends ResourceController
         } else {
             return $this->respond(['message' => 'Invalid JSON data'], 400);
         }
+    }
+
+    public function logout()
+    {
+        session_destroy();
+        return $this->response->setStatusCode(200)->setJSON(['message' => 'Logout successful']);
     }
 }

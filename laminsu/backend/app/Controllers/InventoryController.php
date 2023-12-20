@@ -40,7 +40,7 @@ class InventoryController extends ResourceController
 {
     $data = $this->db->table('audit')
         ->join('items', 'audit.item_id = items.item_id')
-        ->select('audit.*, items.quantity as item_quantity, items.*') 
+        ->select('audit.*, items.quantity as item_quantity, items.*, audit.quantity as audit_quantity') 
         ->get()
         ->getResult();
 
@@ -103,42 +103,41 @@ class InventoryController extends ResourceController
     }
 }
 
-    public function updateProd($id = null)
-    {
-        $request = $this->request;
+public function updateProd($id = null)
+{
+    $request = $this->request;
 
-        $data = [
-            'name' => $request->getPost('name'),
-            'category_id' => $request->getPost('category_id'),
-            'description' => $request->getPost('description'),
-            'price' => $request->getPost('price'),
-            'quantity' => $request->getPost('quantity'),
-        ];
+    $data = [
+        'name' => $request->getPost('name'),
+        'category_id' => $request->getPost('category_id'),
+        'description' => $request->getPost('description'),
+        'price' => $request->getPost('price'),
+        'quantity' => $request->getPost('quantity'),
+    ];
 
+    // Check if an image is provided and is valid
+    if ($request->getFile('image') && $request->getFile('image')->isValid()) {
+        $image = $request->getFile('image');
+        $imageName = $image->getName();
 
-        if ($request->getFile('image')->isValid()) {
-            $image = $request->getFile('image');
-            $imageName = $image->getName();
-
-            $data['img_path'] = $this->handleImageUpload($image, $imageName);
-        }
-
-        $menuModel = new MenuModel();
-
-        try {
-            if ($id !== null) {
-                $menuModel->update($id, $data);
-                return $this->respond(["message" => "Product data updated successfully"], 200);
-            } else {
-                $menuModel->insert($data);
-                return $this->respond(["message" => "Product data saved successfully"], 200);
-            }
-        } catch (\Exception $e) {
-            log_message('error', 'Error saving/updating product: ' . $e->getMessage());
-            return $this->respond(["message" => "Failed to save/update product. Check logs for details."], 500);
-        }
+        $data['img_path'] = $this->handleImageUpload($image, $imageName);
     }
 
+    $menuModel = new MenuModel();
+
+    try {
+        if ($id !== null) {
+            $menuModel->update($id, $data);
+            return $this->respond(["message" => "Product data updated successfully"], 200);
+        } else {
+            $menuModel->insert($data);
+            return $this->respond(["message" => "Product data saved successfully"], 200);
+        }
+    } catch (\Exception $e) {
+        log_message('error', 'Error saving/updating product: ' . $e->getMessage());
+        return $this->respond(["message" => "Failed to save/update product. Check logs for details."], 500);
+    }
+}
 
 
     public function handleImageUpload($image, $imageName)

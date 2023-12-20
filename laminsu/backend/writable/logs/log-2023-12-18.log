@@ -1,0 +1,392 @@
+CRITICAL - 2023-12-18 00:04:01 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:05:35 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:07:21 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:13:39 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:16:47 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:17:37 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:17:49 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:18:21 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:18:47 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:18:52 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:23:35 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:24:16 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:24:49 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:26:37 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:28:54 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:32:58 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:34:06 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:37:50 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:38:42 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:40:28 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 00:40:43 --> Too few arguments to function App\Controllers\CheckoutController::payment(), 0 passed in C:\laragon\www\laminsufinal\laminsu\backend\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\CheckoutController.php on line 153.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\CheckoutController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:25:50 --> Call to a member function find() on null
+in APPPATH\Controllers\POSController.php on line 204.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:33:23 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 201.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:33:36 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 201.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:34:03 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 201.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:35:43 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 201.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:36:10 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 201.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:36:20 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 201.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:19 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:20 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:20 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:21 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:21 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:21 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:21 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:21 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:22 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:22 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:22 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:22 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:22 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:23 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:38:23 --> Call to a member function where() on null
+in APPPATH\Controllers\POSController.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:46 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:46 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:47 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:47 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:48 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:48 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:48 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:48 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:48 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:48 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:49 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:49 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')
+CRITICAL - 2023-12-18 01:39:49 --> Call to a member function set() on null
+in APPPATH\Controllers\POSController.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\POSController->payment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POSController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\laminsufinal\\laminsu\\backend\\public\\index.php')

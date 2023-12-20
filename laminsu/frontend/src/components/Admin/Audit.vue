@@ -24,10 +24,9 @@
                                 <td>{{ index + 1 }}</td>
                                 <td>{{ prod.name }}</td>
                                 <td>{{ prod.oldQuantity }}</td>
-                                <td>{{ prod.quantity }}</td>
+                                <td>{{ prod.audit_quantity }}</td>
                                 <td>{{ prod.type }}</td>
                                 <td>{{ prod.updated_at }}</td>
-                              
                             </tr>
                         </tbody>
                     </table>

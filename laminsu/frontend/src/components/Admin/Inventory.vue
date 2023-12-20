@@ -221,7 +221,7 @@ export default {
                     this.price = products.price;
                     this.productImage = products.img_path;
                     this.category_id = products.category_id;
-
+                    this.quantity = products.quantity;
 
                     this.$router.push({ name: 'inventory', params: { id: id } });
                 } catch (error) {
@@ -261,19 +261,20 @@ export default {
                     formData.append('price', this.price);
                     formData.append('quantity', this.quantity);
 
-                    formData.append('image', this.img_path.get('image'));
+                    if (this.img_path && this.img_path.get('image')) {
+                        formData.append('image', this.img_path.get('image'));
+                    }
 
                     await axios.post(`updateProd/${this.$route.params.id}`, formData);
 
                     this.closeModal();
                     this.$refs.notification.open("Product info updated.", 'success');
-                    const response = await axios.put(`updateQuan/${this.$route.params.id}`, {
-                        quantity: this.quantity,
-                    });
+
                 } catch (error) {
                     console.log(error);
                 }
-            } else {
+            }
+            else {
                 try {
                     const formData = new FormData();
 

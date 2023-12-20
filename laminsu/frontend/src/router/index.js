@@ -23,6 +23,7 @@ import PayedRes from "../components/Admin/PayedRes";
 import Customer from "../components/Admin/Customer";
 import Inventory from "../components/Admin/Inventory";
 import Audit from "../components/Admin/Audit";
+import POS from "../components/Admin/POS";
 
 const routes = [
   {
@@ -68,6 +69,7 @@ const routes = [
       { path: "customer/:id?", component: Customer , name: "customer"},
       { path: "inventory/:id?", component: Inventory , name: "inventory"},
       { path: "audit/:id?", component: Audit , name: "audit"},
+      { path: "pos/:id?", component: POS , name: "pos"},
 
     ],
   },

@@ -26,24 +26,28 @@
 </template>
 
 <script>
+import Resources from '@/components/User/Resources.vue'
+
 export default {
+  components:{
+    Resources
+  },
   data() {
     return {
-      isLargeScreen: window.innerWidth >= 1024, // Adjust the threshold as needed
+      isLargeScreen: window.innerWidth >= 1024,
+      dataLoaded: false,
     };
   },
   mounted() {
-    // Add a resize event listener to update the screen size flag
     window.addEventListener('resize', this.handleResize);
   },
   destroyed() {
-    // Remove the resize event listener when the component is destroyed
     window.removeEventListener('resize', this.handleResize);
   },
   methods: {
     handleResize() {
-      // Update the screen size flag based on the window width
-      this.isLargeScreen = window.innerWidth >= 1024; // Adjust the threshold as needed
+      this.isLargeScreen = window.innerWidth >= 1024; 
+      this.dataLoaded = true;
     },
   },
 };

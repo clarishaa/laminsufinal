@@ -11,8 +11,8 @@
                     <div class="team-item rounded">
                         <img class="img-fluid" src="@/assets/img/team-1.jpg" alt="">
                         <div class="team-text">
-                            <h4 class="mb-0">Doris Jordan</h4>
-                            <p class="text-primary">Landscape Designer</p>
+                            <h4 class="mb-0">Clarish Jabonillo</h4>
+                            <p class="text-primary">Programmerr</p>
                             <div class="team-social d-flex">
                                 <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
