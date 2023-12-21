@@ -105,7 +105,7 @@ export default {
                 $(this.$refs.dataTable).DataTable({
                     dom: "Bfrtip",
                     responsive: true,
-                    pageLength: 5,
+                    pageLength: 10,
                     buttons: ["csv", "excel", "print"],
                 });
             });
@@ -136,10 +136,6 @@ export default {
             }
         },
 
-        async saveProduct() {
-           c
-            this.getStaff();
-        },
 
         closeModal() {
             this.$router.push({ name: 'audit' });

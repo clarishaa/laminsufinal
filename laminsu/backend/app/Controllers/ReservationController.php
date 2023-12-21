@@ -13,7 +13,7 @@ use App\Models\BookModel;
 use App\Models\TableModel;
 use App\Models\OrderItemsModel;
 use App\Models\OrderModel;
-use App\Models\InvoiceModel;
+use App\Models\NotificationModel;
 
 
 class ReservationController extends ResourceController
@@ -123,23 +123,36 @@ class ReservationController extends ResourceController
     public function confirmRes($id = null)
     {
         $model = new BookModel();
-
+        $notifModel = new NotificationModel();
+    
         try {
-            $booking = $model->find(['booking_id' => $id]);
+            $booking = $model->find($id);
+    
             if (!$booking) {
                 return $this->fail('No Data Found for Update', 404);
             }
-            $result = $model->update(['booking_id' => $id], ['status' => 'booked']);
-
-            if (!$result) {
-                return $this->fail('Failed to Book', 500);
+    
+            if ($booking['status'] === 'booked') {
+                return $this->respond(['message' => 'Reservation is already confirmed']);
             }
-
+    
+            $model->update($id, ['status' => 'booked']);
+    
+            $user_id = $booking['user_id'];
+            $notificationData = [
+                'user_id' => $user_id,
+                'message' => 'Your reservation has been confirmed.',
+                'link' => '',
+            ];
+    
+            $notifModel->insert($notificationData);
+    
             return $this->respond(['message' => 'Reservation confirmed successfully']);
         } catch (\Exception $e) {
             return $this->fail('Internal Server Error: ' . $e->getMessage(), 500);
         }
     }
+    
     public function payRes($id = null)
     {
         $model = new BookModel();

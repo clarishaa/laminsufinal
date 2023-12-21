@@ -46,10 +46,10 @@
                     <!-- Additional Details -->
                     <div class="mt-2">
                         <h6 class="mb-0 text-dark text-center">{{ menu.name }}</h6>
-                        <p class="mb-0 text-dark text-center">₱ {{ menu.price }}</p>
+                        <p class="mb-0 text-dark text-center">₱ {{ parseFloat(menu.price).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</p>
                         <p class="mb-0 text-dark text-center">Available: {{ menu.quantity }}</p>
                     </div>
-                    <div class="d-flex flex-column mb-1 align-items-center justify-content-center bottom-0">
+                    <!-- <div class="d-flex flex-column mb-1 align-items-center justify-content-center bottom-0">
                         <div class="d-flex mb-3">
                             <div>
                                 <small class="fa fa-star text-primary"></small>
@@ -59,7 +59,7 @@
                                 <small class="fa fa-star text-primary"></small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 

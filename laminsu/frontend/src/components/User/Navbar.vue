@@ -26,6 +26,24 @@
                     :class="{ 'active': isRouteActive('/contact') }">Contact</router-link>
             </div>
             <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge rounded-pill badge-notification bg-danger small-badge">{{ notifications.length
+                    }}</span>
+                </a>
+                <div class="dropdown-menu bg-light m-0">
+                    <template v-if="notifications.length">
+                        <div v-for="(notification, index) in notifications" :key="index">
+                            <a class="dropdown-item" :href="notification.link">{{ notification.message }}</a>
+                        </div>
+                    </template>
+                    <template v-else>
+                        <p class="dropdown-item">No new notifications</p>
+                    </template>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown"><i class="fas fa-user fa-fw"
                         style="color: forestgreen;"></i></a>
                 <div class="dropdown-menu bg-light m-0">
@@ -46,7 +64,21 @@
 import axios from "axios";
 
 export default {
+    data() {
+        return {
+            notifications: [],
+        };
+    },
+    mounted() {
+        this.getNotif();
+    },
     methods: {
+        async getNotif() {
+            const user_id = sessionStorage.getItem("user_id");
+
+            const notif = await axios.get(`/notification/${user_id}`);
+            this.notifications = notif.data;
+        },
         isRouteActive(route) {
             return this.$route.path === route;
         },
@@ -70,3 +102,8 @@ export default {
 
 };
 </script>
+<style>
+.small-badge {
+    font-size: 0.5rem;
+}
+</style>

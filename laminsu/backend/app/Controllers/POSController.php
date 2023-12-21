@@ -156,6 +156,7 @@ class POSController extends ResourceController
         $this->invoice = new InvoiceModel();
         $this->orderitems = new OrderItemsModel();
         $this->items = new MenuModel();
+        $this->orders = new OrderModel();
 
         try {
             $json = $this->request->getJSON();
@@ -202,6 +203,7 @@ class POSController extends ResourceController
                     $processedItemIds[] = $item['item_id'];
                 }
             }
+            $this->orders->update($invoice['order_id'], ['status' => 'completed']);
 
             return $this->respond(['message' => 'Payment successful'], 200);
         } catch (\Exception $e) {

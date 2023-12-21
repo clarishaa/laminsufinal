@@ -38,7 +38,7 @@
                 <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item" v-for="reviews in reviews">
-                            <img class="img-fluid rounded mb-3" src="@/assets/img/testimonial-1.jpg" alt="">
+                            <i class="fas fa-users fa-5x text-primary mb-3"></i>
                             <p class="fs-5">{{ reviews.content }}</p>
                             <h4>{{ getUser(reviews).first_name }} {{ getUser(reviews).last_name }} </h4>
                         </div>

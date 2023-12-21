@@ -45,6 +45,10 @@
                                         data-bs-target="#editModal" data-bs-placement="top" title="Edit">
                                         <i class="fas fa-edit"></i>
                                     </a>
+                                    <a class="btn btn-primary me-2" @click="openModall(prod.item_id)" data-bs-toggle="modal"
+                                        data-bs-target="#auditModal" data-bs-placement="top" title="Add">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
                                 </td>
                             </tr>
                         </tbody>
@@ -140,7 +144,34 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-danger" @click="deleteConfirmed">Delete</button>
+
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="auditModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content  p-4 rounded m-4">
+                <h5 class="card-title text-center mb-2 fw-light fs-5">{{ modalTitle }}</h5>
+                <form @submit.prevent="saveProd">
+
+                    <!-- Quantity Input -->
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="quantityInput" v-model="quantity" required>
+                            <label for="quantityInput">Product Quantity</label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">{{ submitButtonText
+                        }}</button>
+                    </div>
+
+                    <hr class="my-4">
+                </form>
+
             </div>
         </div>
     </div>
@@ -159,7 +190,6 @@ export default {
     },
     data() {
         return {
-
             formData: {
                 image: null,
             },
@@ -306,6 +336,7 @@ export default {
         closeModal() {
             this.$router.push({ name: 'inventory' });
             $('#editModal').modal('hide');
+            $('#auditModal').modal('hide');
         },
         clearError() {
             this.emailError = '';
@@ -331,6 +362,43 @@ export default {
             }
             this.$router.push({ name: 'inventory' });
         },
+        async openModall(id = null) {
+            if (id) {
+                try {
+                    const response = await axios.get(`fetchProducts/${id}`);
+                    const products = response.data;
+
+                    this.isUpdate = true;
+                    this.modalTitle = 'Add Quantity';
+                    this.submitButtonText = 'Save Changes';
+                    this.productId = id;
+
+
+                    this.$router.push({ name: 'inventory', params: { id: id } });
+                } catch (error) {
+                    console.error('Error fetching audit data:', error);
+                }
+            } else {
+                this.isUpdate = false;
+                this.modalTitle = 'Add Product';
+                this.submitButtonText = 'Add';
+                this.employeeId = null;
+
+                this.$router.push({ name: 'inventory' });
+            }
+        },
+        async saveProd() {
+            const q = {
+                quantity: this.quantity
+            };
+            
+            await axios.put(`updateQuan/${this.$route.params.id}`, q);
+            this.$refs.notification.open("Product quantity updated.", 'success');
+            this.$router.push({ name: 'inventory' });
+            this.closeModal();
+            this.getStaff();
+        }
+
     },
 };
 </script>

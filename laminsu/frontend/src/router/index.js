@@ -24,12 +24,18 @@ import Customer from "../components/Admin/Customer";
 import Inventory from "../components/Admin/Inventory";
 import Audit from "../components/Admin/Audit";
 import POS from "../components/Admin/POS";
+import samplecrud from "../views/samplecrud.vue";
 
 const routes = [
   {
     path: "/signup",
     name: "signup",
     component: Register,
+  },
+  {
+    path: "/samplecrud",
+    name: "samplecrud",
+    component: samplecrud,
   },
 
   {

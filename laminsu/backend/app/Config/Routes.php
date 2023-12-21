@@ -52,3 +52,10 @@ $routes->get('/getPos/(:segment)', 'POSController::getCart/$1');
 $routes->match(['get', 'post'], '/pay', 'POSController::pay');
 $routes->match(['get', 'post'], '/payment', 'POSController::payment');
 $routes->post('/logout', 'MainController::logout');
+$routes->get( '/notification/(:segment)', 'NotificationController::notif/$1');
+
+
+$routes->get('/getDataa', 'CrudController::getDataa');
+$routes->post('/saveee', 'CrudController::saveee');
+$routes->post('updateItem/(:any)', 'CrudController::updateItem/$1');
+$routes->post('del', 'CrudController::del');
